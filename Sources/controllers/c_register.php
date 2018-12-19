@@ -1,10 +1,11 @@
 <?php
     class C_register
     {
-        
-        function register()
+        public function register()
         {
             include('models/m_user.php');
+            include('config/home_url.php');
+            require_once('views/v_register.php');
             $m_user = new M_user();
             if(isset($_POST['register']))
             {
@@ -21,7 +22,7 @@
                         if($m_user->addUser($email,$hash,$status,$access_code,$level)){
                             $send_to_email = $email;
                             $body="Hi {$send_to_email}.<br /><br />";
-                            $body.="Please click the following link to verify your email and login: http://localhost:8888/new/verify.php/?access_code={$access_code}";
+                            $body.="Please click the following link to verify your email and login: {$home_url}?access_code={$access_code}";
                             $subject="Verification Email";
                             if($this->sendEmailViaPhpMail($send_to_email, $subject, $body))
                                 echo "<div class='alert alert-success'> Verification link was sent to your email. Click that link to login. </div>";
@@ -31,7 +32,7 @@
                     }
                     else {
                         echo "<div class='alert alert-danger'>";
-                            echo "The email you specified is already registered. Please try again or <a href='http://localhost:8888/new/login.php'>login.</a>";
+                            echo "The email you specified is already registered. Please try again or <a href='{$home_url}login.php'>login.</a>";
                         echo "</div>";
                     }
                 }

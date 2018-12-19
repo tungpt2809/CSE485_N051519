@@ -5,6 +5,7 @@
         {
             include('models/m_user.php');
             include('config/home_url.php');
+            require_once('views/v_login.php');
             $m_user = new M_user();
             if(isset($_POST['login'])){
                 $email = $_POST['email'];
