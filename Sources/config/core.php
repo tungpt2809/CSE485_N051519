@@ -8,5 +8,5 @@ session_start();
 date_default_timezone_set('Asia/Ho_Chi_Minh');
  
 // home page url
-$home_url="http://localhost:8888/new/";
+include('config/home_url.php');
 ?>

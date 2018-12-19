@@ -1,15 +1,16 @@
 <?php
-include_once('public/layout/layout_head.php');
-include('controllers/c_login.php');
-$c_login = new C_login();
-$c_login->login();
+    $require_login=false;
+    $page_title = "Login";
+    include_once('public/layout/layout_head.php');
+    include_once('login_checker.php');
+    include('controllers/c_login.php');
+    $c_login = new C_login();
+    $c_login->login();
 ?>
-    <form action= "" method="POST">
-        <h3>Login</h3>        
-        <input placeholder="Email" type="text" required="" name="email">
-        <input placeholder="Password" type="password" required="" name="pwd">
-        <a href="register.php" style="margin-left: 22px;">Do not have account? Sign Up</a>
-        <br/>
-        <button type="submit" name="login">Lest's GO</button>
+    <form action="" method="POST" class="loginForm">
+        <h1>Login</h1>
+        <input type="email" placeholder="Email" required="" name="email">
+        <input type="password" placeholder="Password" required="" name="pwd">
+        <input type="submit" name="login" value="Let's GO">
     </form>
 <?php include_once('public/layout/layout_foot.php');?>

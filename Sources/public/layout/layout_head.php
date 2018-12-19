@@ -10,5 +10,7 @@
     <link rel="stylesheet" href="public/libs/css/all.min.css">
 </head>
 <body>    
-    <?php include_once('navigation.php') ?>
+    <?php 
+        include_once('navigation.php') 
+    ?>
     

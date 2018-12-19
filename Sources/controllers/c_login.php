@@ -4,6 +4,7 @@
         function login()
         {
             include('models/m_user.php');
+            include('config/home_url.php');
             $m_user = new M_user();
             if(isset($_POST['login'])){
                 $email = $_POST['email'];
@@ -13,11 +14,11 @@
                 {
                     $_SESSION['logged_in'] = true;
                     $_SESSION['access_level'] = $m_user->level;
-                    if($user->access_level=='Admin'){
-                        header("Location: http://localhost:8888/new/admin/index.php?action=login_success");
+                    if($m_user->level=='Admin'){
+                        header("Location: {$home_url}admin/index.php?action=login_success");
                     }
                     else{
-                        header("Location: http://localhost:8888/new/index.php?action=login_success");
+                        header("Location: {$home_url}index.php?action=login_success");
                     }
                 }
                 else {
