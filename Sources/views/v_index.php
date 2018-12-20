@@ -5,29 +5,29 @@
         switch($subject_id)
         {
             case 1:
-                return '<i class="fas fa-calculator"></i> Math';
+                return '<i class="fas fa-calculator"></i> Toán học';
             case 2:  
-                return '<i class="fas fa-comments"></i> English';
+                return '<i class="fas fa-comments"></i> Tiếng Anh';
             case 3:
-                return '<i class="fas fa-cogs"></i> Physical';
+                return '<i class="fas fa-cogs"></i> Vật Lý';
             case 4: 
-                return '<i class="fas fa-vial"></i> Chemistry';
+                return '<i class="fas fa-vial"></i> Hóa Học';
             case 5:
-                return '<i class="fas fa-leaf"></i> Biological';
+                return '<i class="fas fa-leaf"></i> Sinh Học';
             case 6:
-                return '<i class="fas fa-globe-asia"></i> Geography';
+                return '<i class="fas fa-globe-asia"></i> Địa Lý';
             case 7:
-                return '<i class="fas fa-landmark"></i> History';
+                return '<i class="fas fa-landmark"></i> Lịch Sử';
             case 8:
-                return '<i class="fas fa-desktop"></i> Informatics';
+                return '<i class="fas fa-desktop"></i> Tin Học';
             case 9:
-                return '<i class="fab fa-android"></i> Technology';
+                return '<i class="fab fa-android"></i> Công Nghệ';
         }    
     }
 ?>
 <div id="content" class="container">
     <div class="fixed-sidebar col-md-2">
-        <span class="label">Subject</span>
+        <span class="label">Môn Học</span>
         <ul class="sidebar">
             <?php for($i=1; $i<=9; $i++){?>
             <li>
@@ -40,28 +40,31 @@
     </div>    
     <div class="col-md-8 quiz-set">
         <?php for($i=0; $i<count($exam); $i++){?>
-        <div class="quiz-item">
-            <div class="container">
+        <div class="quiz-item row">
+            <div class="container col-md-10">
                 <div class="row" style="margin-top:5px;">
                     <div class="col-md-12">
-                        <?php echo whatSubject($exam[$i]->subject_id).' | '.$exam[$i]->duration.' minutes'?>
+                        <?php echo whatSubject($exam[$i]->subject_id).' | <i class="far fa-clock"></i> '.$exam[$i]->duration.' phút'?>
                     </div>
                 </div>
                 <div class="row" style="margin:20px 0;">
-                    <div class="container">
-                        <div class="col-md-12">
-                            <a href="" style="text-decoration:none; color:#00F; font-size: 20px;">
-                                <?php echo $exam[$i]->exam_name?>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    <span style="font-size: 20px;">
+                        <?php echo $exam[$i]->exam_name?>
+                    </span>
+                </div>                      
                 <div class="row">
                     <div class="col-md-12">
                         <i class="far fa-question-circle"></i>
-                        <?php echo ' '.$exam[$i]->number_of_questions.' questions'?>
+                        <?php echo ' '.$exam[$i]->number_of_questions.' câu'?>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-2 do-this-exam">
+                <a href="">
+                    <i class="fas fa-pen" style="color: #fff;">
+                        Làm bài
+                    </i>
+                </a>
             </div>
         </div>
         <?php } ?>

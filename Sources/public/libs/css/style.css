@@ -84,8 +84,22 @@ header .navbar .navbar-brand{
     color: #ccc;
 }
 .quiz-set .quiz-item:hover{
-    transform: translateY(-5px);
     border: 2px solid #2ecc71;
+}
+.do-this-exam{
+    font-size: 30px;
+    text-align: center;
+    opacity: 1;
+    visibility: hidden;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    padding-top: 20px;
+}
+.do-this-exam a{
+    color: #ccc;
+}
+.quiz-set .quiz-item:hover .do-this-exam{
+    visibility: visible;
 }
 /* end content */
 /* login form */

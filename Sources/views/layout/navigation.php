@@ -30,5 +30,5 @@
                 </ul>
             </nav>
         </div>
-    <header>
+    </header>
 <div class="container-fluid">
