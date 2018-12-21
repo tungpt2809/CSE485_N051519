@@ -1,5 +1,6 @@
 <?php    
-    include_once('views/layout/layout_head.php'); 
+    include_once('config/home_url.php');
+    include_once('views/layout/home_head.php');
     function whatSubject($subject_id)
     {
         switch($subject_id)
@@ -32,7 +33,9 @@
             <?php for($i=1; $i<=9; $i++){?>
             <li>
                 <div class="subj-item">
-                    <?php echo whatSubject($i);?>
+                    <a href="<?php echo $home_url?>?subject_id=<?php echo $i ?>">
+                        <?php echo whatSubject($i);?>
+                    </a>
                 </div>
             </li>
             <?php }?>
@@ -60,7 +63,7 @@
                 </div>
             </div>
             <div class="col-md-2 do-this-exam">
-                <a href="">
+                <a href="<?php echo $home_url?>question.php?exam_id=<?php echo $exam[$i]->id?>">
                     <i class="fas fa-pen" style="color: #fff;">
                         Làm bài
                     </i>
@@ -70,5 +73,3 @@
         <?php } ?>
     </div>
 </div>
-
-<?php include_once('views/layout/layout_foot.php') ?>

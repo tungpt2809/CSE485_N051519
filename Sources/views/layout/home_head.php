@@ -11,6 +11,6 @@
 </head>
 <body>    
     <?php 
-        include_once('navigation.php') 
+        include_once('navigation.php'); 
     ?>
     

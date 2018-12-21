@@ -29,6 +29,7 @@
             if($num>0)
             {
                 $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                $this->id = $row['id'];
                 $this->pwd = $row['password'];
                 $this->status = $row['status'];
                 $this->level = $row['level'];

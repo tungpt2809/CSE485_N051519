@@ -44,7 +44,7 @@ header .navbar .navbar-brand{
     border-right: 2px solid #ccc;
     color: #ccc;
 }
-.sidebar li a {
+.subj-item a {
     text-decoration: none;
 }
 .sidebar li:hover {

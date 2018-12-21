@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2018 at 01:55 PM
+-- Generation Time: Dec 21, 2018 at 03:16 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -65,7 +65,22 @@ INSERT INTO `answer` (`question_id`, `A`, `B`, `C`, `D`) VALUES
 (22, 'CLTN là nhân tố định hướng quá trình tiến hóa. ', 'CLTN tác động trực tiếp lên kiểu gen làm biến đổi tần số alen của quần thể.', 'CLTN chỉ diễn ra khi môi trường sống thay đổi.', 'CLTN tạo ra kiểu gen mới quy định kiểu hình thích nghi với môi trường.'),
 (23, 'Kích thước quần thể luôn giống nhau giữa các quần thể cùng loài. B. C.   D. .', 'Kích thước quần thể chỉ phụ thuộc vào mức độ sinh sản và mức độ tử vong của quần thể.', 'Nếu kích thước quần thể vượt quá mức tối đa thì mức độ cạnh tranh giữa các cá thể sẽ tăng cao.', 'Nếu kích thước quần thể xuống dưới mức tối thiểu, mức độ sinh sản của quần thể sẽ tăng lên.'),
 (24, 'Thực vật đóng vai trò chủ yếu trong việc truyền năng lượng từ môi trường vô sinh vào quần xã sinh vật.', 'Sự thất thoát năng lượng qua mỗi bậc dinh dưỡng trong hệ sinh thái là không đáng kể.', 'Vật chất và năng lượng đều được trao đổi theo vòng tuần hoàn kín.', 'Vi khuẩn là nhóm sinh vật duy nhất có khả năng phân giải các chất hữu cơ thành các chất vô cơ.'),
-(25, 'Đột biến lặp đoạn làm tăng số lượng gen trên 1 NST.', 'Đột biến lặp đoạn luôn có lợi cho thể đột biến.', 'Đột biến lặp đoạn có thể làm cho 2 alen của 1 gen cùng nằm trên 1 NST.', 'Đột biến lặp đoạn có thể dẫn đến lặp gen, tạo điều kiện cho đột biến gen, tạo ra các gen mới.');
+(25, 'Đột biến lặp đoạn làm tăng số lượng gen trên 1 NST.', 'Đột biến lặp đoạn luôn có lợi cho thể đột biến.', 'Đột biến lặp đoạn có thể làm cho 2 alen của 1 gen cùng nằm trên 1 NST.', 'Đột biến lặp đoạn có thể dẫn đến lặp gen, tạo điều kiện cho đột biến gen, tạo ra các gen mới.'),
+(26, 'AAaBbb.', 'AaaBBb.', 'AAaBBb', 'AaaBbb.'),
+(27, 'Đời con có thể có 1 loại kiểu gen và 1 loại kiểu hình.', 'Đời con có thể có 2 loại kiểu gen và 1 loại kiểu hình.', 'Đời con có thể có 3 loại kiểu gen và 2 loại kiểu hình.', 'Đời con có thể có 2 loại kiểu gen và 2 loại kiểu hình.'),
+(28, 'Cây thân thấp, lá nguyên ở Fa giảm phân bình thường tạo ra 4 loại giao tử.', 'Cho cây F1 tự thụ phấn, thu được F2 có 1/3 số cây thân cao, lá xẻ.', 'Cây thân cao, lá xẻ ở Fa đồng hợp tử về 2 cặp gen.', 'Cây thân cao, lá nguyên ở Fa và cây thân cao, lá nguyên ở F1 có kiểu gen giống nhau.'),
+(29, 'Quá trình này chỉ xảy ra ở động vật mà không xảy ra ở thực vật.', 'Cách li địa lí là nguyên nhân trực tiếp gây ra những biến đổi tương ứng trên cơ thể sinh vật.', 'Vốn gen của quần thể có thể bị thay đổi nhanh hơn nếu có tác động của các yếu tố ngẫu nhiên.', 'Quá trình này thường xảy ra một cách chậm chạp, không có sự tác động của CLTN.'),
+(30, 'Kích thước của quần thể không phụ thuộc vào điều kiện môi trường.', 'Sự phân bố cá thể có ảnh hưởng tới khả năng khai thác nguồn sống trong môi trường.', 'Mật độ cá thể của mỗi quần thể luôn ổn định, không thay đổi theo mùa, theo năm.', 'Khi kích thước quần thể đạt mức tối đa thì tốc độ tăng trưởng của quần thể là lớn nhất.'),
+(31, 'Cáo và cú mèo có ổ sinh thái về dinh dưỡng khác nhau.', 'Có 5 loài cùng thuộc bậc dinh dưỡng cấp 2.', 'Chuỗi thức ăn dài nhất gồm có 5 mắt xích.', 'Cú mèo là sinh vật tiêu thụ bậc 3.'),
+(32, 'Tất cả nấm đều là sinh vật phân giải.', 'Sinh vật tiêu thụ bậc 3 luôn có sinh khối lớn hơn sinh vật tiêu thụ bậc 2.', 'Tất cả các loài động vật ăn thịt thuộc cùng một bậc dinh dưỡng.', 'Vi sinh vật tự dưỡng được xếp vào nhóm sinh vật sản xuất.'),
+(33, 'Tối đa 8 loại giao tử.', 'Loại giao tử mang 3 alen trội chiếm tỉ lệ 1/8.', '6 loại giao tử với tỉ lệ bằng nhau.', '4 loại giao tử với tỉ lệ 5 : 5 : 1 : 1.'),
+(34, '1', '3', '4', '2'),
+(35, '1', '2', '3', '4'),
+(36, '28,25%.', '10,25%.', '25,00%.', '14,75%.'),
+(37, '1', '2', '3', '4'),
+(38, '2', '4', '3', '1'),
+(39, '1', '2', '3', '4'),
+(40, '1', '2', '3', '4');
 
 -- --------------------------------------------------------
 
@@ -77,6 +92,52 @@ CREATE TABLE `correct_answer` (
   `question_id` int(11) NOT NULL,
   `correct` varchar(1) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `correct_answer`
+--
+
+INSERT INTO `correct_answer` (`question_id`, `correct`) VALUES
+(1, 'B'),
+(2, 'A'),
+(3, 'D'),
+(4, 'B'),
+(5, 'D'),
+(6, 'D'),
+(7, 'A'),
+(8, 'B'),
+(9, 'B'),
+(10, 'A'),
+(11, 'A'),
+(12, 'B'),
+(13, 'A'),
+(14, 'C'),
+(15, 'B'),
+(16, 'C'),
+(17, 'A'),
+(18, 'B'),
+(19, 'B'),
+(20, 'A'),
+(21, 'C'),
+(22, 'A'),
+(23, 'C'),
+(24, 'A'),
+(25, 'B'),
+(26, 'A'),
+(27, 'D'),
+(28, 'D'),
+(29, 'C'),
+(30, 'B'),
+(31, 'A'),
+(32, 'D'),
+(33, 'D'),
+(34, 'D'),
+(35, 'B'),
+(36, 'D'),
+(37, 'A'),
+(38, 'D'),
+(39, 'B'),
+(40, 'D');
 
 -- --------------------------------------------------------
 
@@ -111,6 +172,52 @@ CREATE TABLE `exam_info` (
   `exam_id` int(11) NOT NULL,
   `question_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `exam_info`
+--
+
+INSERT INTO `exam_info` (`exam_id`, `question_id`) VALUES
+(3, 1),
+(3, 2),
+(3, 3),
+(3, 4),
+(3, 5),
+(3, 6),
+(3, 7),
+(3, 8),
+(3, 9),
+(3, 10),
+(3, 11),
+(3, 12),
+(3, 13),
+(3, 14),
+(3, 15),
+(3, 16),
+(3, 17),
+(3, 18),
+(3, 19),
+(3, 20),
+(3, 21),
+(3, 22),
+(3, 23),
+(3, 24),
+(3, 25),
+(3, 26),
+(3, 27),
+(3, 28),
+(3, 29),
+(3, 30),
+(3, 31),
+(3, 32),
+(3, 33),
+(3, 34),
+(3, 35),
+(3, 36),
+(3, 37),
+(3, 38),
+(3, 39),
+(3, 40);
 
 -- --------------------------------------------------------
 
@@ -165,7 +272,7 @@ INSERT INTO `question` (`id`, `content`, `level_of_difficult`, `created`, `modif
 (32, 'Khi nói về thành phần hữu sinh trong hệ sinh thái, phát biểu nào sau đây đúng?', 1, NULL, NULL),
 (33, 'Ba tế bào sinh tinh của cơ thể có kiểu gen Aa(BD/bd)giảm phân bình thường, trong đó có 1 tế bào xảy ra hoán vị giữa alen D và alen d. Theo lí thuyết, kết thúc giảm phân có thể tạo ra', 3, NULL, NULL),
 (34, 'Một loài thực vật có bộ NST 2n = 24. Giả sử có 1 thể đột biến của loài này chỉ bị đột biến mất đoạn nhỏ không chứa tâm động ở 1 NST thuộc cặp số 5. Cho biết không phát sinh đột biến mới, thể đột biến này giảm phân bình thường và không xảy ra trao đổi chéo. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng về thể đột biến này?', 2, NULL, NULL),
-(35, 'Một loài thực vật, cho cây thân cao, hoa đỏ (P) tự thụ phấn, thu được F1 có 4 loại kiểu hình trong đó có 1% số cây thân thấp, hoa trắng. Biết rằng mỗi gen quy định 1 tính trạng. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\nI. F1 có tối đa 9 loại kiểu gen.\r\nII. F1 có 32% số cây đồng hợp tử về 1 cặp gen.\r\nIII. F1 có 24% số cây thân cao, hoa trắng.\r\nIV. Kiểu gen của P có thể là AB/ab\r\n  ', NULL, NULL, NULL),
+(35, 'Một loài thực vật, cho cây thân cao, hoa đỏ (P) tự thụ phấn, thu được F1 có 4 loại kiểu hình trong đó có 1% số cây thân thấp, hoa trắng. Biết rằng mỗi gen quy định 1 tính trạng. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\nI. F1 có tối đa 9 loại kiểu gen.\r\nII. F1 có 32% số cây đồng hợp tử về 1 cặp gen.\r\nIII. F1 có 24% số cây thân cao, hoa trắng.\r\nIV. Kiểu gen của P có thể là AB/ab\r\n  ', 3, NULL, NULL),
 (36, 'Ở ruồi giấm, alen A quy định thân xám trội hoàn toàn so với alen a quy định thân đen; alen B quy định cánh dài trội hoàn toàn so với alen b quy định cánh cụt; alen D quy định mắt đỏ trội hoàn toàn so với alen d quy định mắt trắng. Phép lai P:  , thu được F1 có 5,125% số cá thể có kiểu hình lặn về 3 tính trạng. Theo lí thuyết, số cá thể cái dị hợp tử về 1 trong 3 cặp gen ở F1 chiếm tỉ lệ', 3, NULL, NULL),
 (37, 'Một loài thực vật, cho cây hoa đỏ (P) tự thụ phấn, thu được F1 gồm 56,25% cây hoa đỏ; 18,75% cây hoa hồng; 18,75% cây hoa vàng; 6,25% cây hoa trắng. Lai phân tích cây hoa đỏ dị hợp tử về 2 cặp gen ở F1, thu được Fa. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n\r\nI. F1 có 6 loại kiểu gen quy định kiểu hình hoa đỏ.\r\n\r\nII. Các cây hoa đỏ F1 giảm phân đều cho 4 loại giao tử với tỉ lệ bằng nhau.\r\n\r\nIII. Fa có số cây hoa vàng chiếm 25%.\r\n\r\nIV. Fa có số cây hoa đỏ chiếm tỉ lệ lớn nhất.', 3, NULL, NULL),
 (38, 'Một loài thực vật, tính trạng chiều cao thân do 2 cặp gen A, a và B, b phân li độc lập cùng quy định: kiểu gen có cả 2 loại alen trội A và B quy định thân cao, các kiểu gen còn lại đều quy định thân thấp. Alen D quy định hoa vàng trội hoàn toàn so với alen d quy định hoa trắng. Cho cây dị hợp tử về 3 cặp gen (P) tự thụ phấn, thu được F1 có kiểu hình phân li theo tỉ lệ 6 cây thân cao, hoa vàng : 6 cây thân thấp, hoa vàng : 3 cây thân cao, hoa trắng : 1 cây thân thấp, hoa trắng. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n\r\nI. Kiểu gen của cây P có thể là .\r\n\r\nII. F1 có 1/4 số cây thân cao, hoa vàng dị hợp tử về 3 cặp gen.\r\n\r\nIII. F1 có tối đa 7 loại kiểu gen.\r\n\r\nIV. F1 có 3 loại kiểu gen quy định cây thân thấp, hoa vàng. ', 3, NULL, NULL),

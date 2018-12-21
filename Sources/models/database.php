@@ -55,5 +55,44 @@
             }
             return $result->fetchAll(PDO::FETCH_OBJ);
         }
+        //Funtion load 1 data on the table
+        public function loadRow($option=array())
+        {
+            if (!$option) {
+                if (!$result = $this->execute()) {
+                    return false;
+                }
+            } else {
+                if (!$result = $this->execute($option)) {
+                    return false;
+                }
+            }
+            return $result->fetch(PDO::FETCH_OBJ);
+        }
+        //Function count the record on the table
+        public function loadRecord($option=array())
+        {
+            if (!$option) {
+                if (!$result = $this->execute()) {
+                    return false;
+                }
+            } else {
+                if (!$result = $this->execute($option)) {
+                    return false;
+                }
+            }
+            return $result->fetch(PDO::FETCH_COLUMN);
+        }
+
+        public function getLastId()
+        {
+            return $this->pdo->lastInsertId();
+        }
+
+        public function disconnect()
+        {
+            $this->sta=null;
+            $this->pdo = null;
+        }
     }
 ?>
