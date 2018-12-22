@@ -63,9 +63,9 @@
                 </div>
             </div>
             <div class="col-md-2 do-this-exam">
-                <a href="<?php echo $home_url?>question.php?exam_id=<?php echo $exam[$i]->id?>">
-                    <i class="fas fa-pen" style="color: #fff;">
-                        Làm bài
+                <a href="<?php echo $home_url?>exam_info.php?eid=<?php echo $exam[$i]->id?>">
+                    <i class="fas fa-pen">
+                        <span>Làm bài</span>
                     </i>
                 </a>
             </div>

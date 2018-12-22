@@ -1,5 +1,5 @@
 <?php
-    include('database.php');
+    include_once('models/database.php');
     class M_user extends Database
     {
         public $pwd;

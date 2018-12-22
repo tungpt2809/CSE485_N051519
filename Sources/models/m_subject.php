@@ -1,5 +1,5 @@
 <?php
-require_once('models/database.php');
+    include_once('models/database.php');
     class M_subject extends Database
     {
         public function getAllSubject()

@@ -3,7 +3,7 @@
     define("DB_NAME","online_examination_system");
     define("DB_USER","root");
     define("DB_PWD","");
-    class Database 
+    class Database
     {
         protected $conn = '';
         protected $sql = '';

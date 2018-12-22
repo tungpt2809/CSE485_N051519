@@ -1,5 +1,6 @@
 <?php
-    class M_answer extends Databse
+    include_once('models/database.php');
+    class M_answer extends Database
     {
         public function getAnswerByQuestionId($question_id)
         {

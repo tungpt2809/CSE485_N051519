@@ -6,8 +6,8 @@
     <title><?php echo isset($page_title) ? strip_tags($page_title) : "Welcome to Online Exam | T-Tex"; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="public/libs/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/libs/css/style.css">
     <link rel="stylesheet" href="public/libs/css/all.min.css">
+    <link rel="stylesheet" href="public/libs/css/style.css">
 </head>
 <body>    
     <?php 
