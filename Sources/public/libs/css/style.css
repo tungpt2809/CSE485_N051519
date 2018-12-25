@@ -118,6 +118,7 @@ header .navbar .navbar-brand{
     background: #191919;
     text-align: center;
 }
+.loginForm input[type="text"],
 .loginForm input[type="email"],
 .loginForm input[type="password"]{
     border: 0;

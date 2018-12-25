@@ -23,21 +23,64 @@ header .navbar .navbar-brand{
     color: #1997d4;
 }
 /* end navbar */
-
-.exam-name,
-.exam-detail{
+#exam-head{
+    margin-bottom: 20px;
+}
+#exam-head .exam-name,
+#exam-head .exam-detail{
     text-align: center;
+    margin: 20px auto;
+}
+#exam-head,
+.exam-content{
+    border-bottom: 1px solid #ccc;
+}
+#exam{
+    position: relative;
+    margin-bottom: 5px !important;
+    height: auto; 
+    min-height: 505px; 
+    background: white;
+}
+.exam-right{ 
+    width: 200px;
+    display: inline-block;
+    overflow: auto;
+    position: absolute;
+    top: 10px;  
+    right: -100px;
+    transition: 0.6s;
+    height: 490px;
+    background: white; 
+    border: 2px solid #00F; 
+    visibility: hidden;
+}
+.sticky {
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    visibility: visible;
+  }
+.exam-right .menu-link{
+    display: block;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    font-weight: bold; 
 }
 
-/*font*/
-/* cyrillic-ext */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-  }
+.exam-right .menu-link .tick{ 
+    float: right; 
+    color: green;
+    margin-right: 15px; 
+}
+.exam-left{
+    width: calc(100% - 200px); 
+    padding-top: 5px;
+}
+.clear{
+    clear: both;
+}
   /* cyrillic */
   @font-face {
     font-family: 'Montserrat';

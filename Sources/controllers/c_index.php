@@ -1,9 +1,10 @@
 <?php
+require_once('controllers/c_exam.php');
     class C_index
     {
         public function showIndexPage()
         {
-            include('controllers/c_exam.php');
+            
             $c_exam = new C_exam();
             $allExams = $c_exam->allExams();
             $exam = $allExams["exams"];
@@ -12,7 +13,6 @@
         }
         public function showSubjectPage()
         {   
-            include('controllers/c_exam.php');
             if(isset($_GET['subject_id']))
                 $subject_id = $_GET['subject_id'];
             else echo "Khong co subject_id";

@@ -63,11 +63,22 @@
                 </div>
             </div>
             <div class="col-md-2 do-this-exam">
-                <a href="<?php echo $home_url?>exam_info.php?eid=<?php echo $exam[$i]->id?>">
-                    <i class="fas fa-pen">
-                        <span>Làm bài</span>
-                    </i>
-                </a>
+                        <?php
+                        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
+						?>
+						<a href="<?php echo $home_url?>exam.php?eid=<?php echo $exam[$i]->id?>">
+                            <i class="fas fa-pen">
+                                <span>Làm bài</span>
+                            </i>
+                        </a>
+						<?php }else{ ?>
+							<a href="<?php echo $home_url?>login.php" onclick="return confirm('Đăng nhập để làm bài')">
+                                <i class="fas fa-pen">
+                                    <span>Làm bài</span>
+                                </i>
+                            </a>
+						<?php }?>                
+                        
             </div>
         </div>
         <?php } ?>

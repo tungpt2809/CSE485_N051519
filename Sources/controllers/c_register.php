@@ -1,11 +1,11 @@
 <?php
+require_once('models/m_user.php');
+require_once('views/v_register.php');
     class C_register
     {
         public function register()
         {
-            include('models/m_user.php');
-            include('config/home_url.php');
-            require_once('views/v_register.php');
+            require_once('config/home_url.php');
             $m_user = new M_user();
             if(isset($_POST['register']))
             {

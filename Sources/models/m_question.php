@@ -8,5 +8,17 @@
             $this->setQuery($sql);
             return $this->loadAllRows();
         }
+        public function getQuestionById($id)
+        {
+            $sql = "SELECT id, content, solution FROM question WHERE question.id = $id";
+            $this->setQuery($sql);
+            return $this->loadRow();
+        }
+        public function getExamIncludeQuestion($question_id)
+        {
+            $sql = "SELECT * FROM exam_info INNER JOIN exam ON exam.id = exam_info.exam_id WHERE question_id = $question_id";
+            $this->setQuery($sql);
+            return $this->loadRow();
+        }
     }
 ?>  
