@@ -8,8 +8,6 @@ require_once('models/m_subject.php');
             $subject = $m_subject->getAllSubject();
             return array('subject'=>$subject);
         }
-        
-
     }
 
 ?>

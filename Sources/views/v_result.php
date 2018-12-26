@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Online Exam | Result</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="public/libs/css/examInfo.css"/>
-    <link rel="stylesheet" type="text/css" href="public/libs/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="public/libs/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/examInfo.css"/>
+    <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/all.min.css">
 </head>
 <body>
-    <?php include('layout/navigation.php')?>	
+    <?php include('layout/navigation.php')?>
     <div id="exam-head">
 		<div class="container">
 			<div class="exam-name">
 				<div class="row">	
-					<h1>
+					<h1 class="col-md-12">
 						<?= $exam->exam_name ?>
 					</h1>
 				</div>
@@ -23,10 +23,10 @@
 			<div class="exam-detail">
 				<div class="row">
 					<div class="col-md-6">
-						<h6><i class="far fa-clock"></i> Thời gian làm bài: <?= $exam->duration ?> phút</h6>
+						<h6><i class="far fa-clock"></i> Thời gian làm bài : <?= $exam->duration ?> phút</h6>
 					</div>
 					<div class="col-md-6">
-						<h6><i class="far fa-question-circle"></i> Số lượng câu hỏi: <?= $exam->number_of_questions ?> câu</h6>
+						<h6><i class="far fa-question-circle"></i> Số lượng câu hỏi : <?= $exam->number_of_questions ?> câu</h6>
 					</div>
                 </div>
                 <div class="row">
@@ -52,15 +52,16 @@
 		</div>
         <div class="exam-left">	
         <?php
-            $i=1;
+            $i=0;
             foreach($arr as $key=>$value){
                 if(is_numeric($key))
                 {
+                    $quest = $m_question->getQuestionById($key);
         ?>
             <div id="quest-<?=($i+1)?>" class="exam-content">
                 <div class="question">
-                    <b>Câu <?=$i++?>:</b>
-                    <p><?= $m_question->getQuestionById($key)->content ?></p>
+                    <b>Câu <?=++$i?>:</b>
+                    <p><?= $quest->content ?></p>
                 </div>
                 <div class="answer">
                     <?php 
@@ -69,8 +70,16 @@
                     ?>
                     <p>
                         <label>
-                            <input type="radio" disabled>
-                            <?php 
+                            <?php
+                                if($item_answer->id == $value){
+                            ?>
+                                    <input type="radio" disabled checked>
+                            <?php
+                                }else{
+                            ?>
+                                    <input type="radio" disabled>
+                            <?php
+                                } 
                                 if($item_answer->correct == 1){
                             ?>
                                     <span style="color: green; font-weight: 1000;"><?=$item_answer->content ?></span>
@@ -91,6 +100,12 @@
                     </p>
                     <?php } ?>
                 </div>
+                <div class="solution-btn">
+                    <span>Xem lời giải</span>
+                </div>
+                <div class="solution">
+                    <p><?=($quest->solution == 'NULL' || $quest->solution=='')?'Chưa có lời giải cho câu hỏi này':$quest->solution ?></p>
+                </div>
             </div>
         <?php
                 }
@@ -103,6 +118,6 @@
 		    - LE FIN -
         </div>
 	</div>
-    <script src="public/libs/js/examInfo.js"></script>
+    <script src="public/js/examInfo.js"></script>
 </body>
 </html>

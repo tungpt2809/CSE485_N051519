@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2018 at 02:14 PM
+-- Generation Time: Dec 26, 2018 at 01:37 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -199,7 +199,47 @@ INSERT INTO `answer` (`id`, `question_id`, `content`, `correct`) VALUES
 (163, 22, 'Noi dung cau tra loi', 0),
 (164, 22, 'Noi dung cau tra loi', 0),
 (165, 22, 'Noi dung cau tra loi', 0),
-(166, 22, 'Noi dung cau tra loi', 1);
+(166, 22, 'Noi dung cau tra loi', 1),
+(167, 42, '2', 1),
+(170, 42, '4', 0),
+(171, 42, '15', 0),
+(172, 42, '8', 0),
+(175, 43, '2', 0),
+(176, 43, '15', 0),
+(177, 43, '4', 1),
+(178, 43, '8', 0),
+(179, 44, '10', 0),
+(180, 44, '6', 1),
+(181, 44, '3', 0),
+(182, 44, '12', 0),
+(183, 45, '8', 1),
+(184, 45, '2', 0),
+(185, 45, '4', 0),
+(186, 45, '16', 0),
+(187, 46, '10', 1),
+(188, 46, '23', 0),
+(189, 46, '25', 0),
+(190, 46, '15', 0),
+(191, 47, '12', 1),
+(192, 47, '22', 0),
+(193, 47, '20', 0),
+(194, 47, '10', 0),
+(195, 48, '14', 1),
+(196, 48, '16', 0),
+(197, 48, '12', 0),
+(198, 48, '10', 0),
+(199, 49, '16', 1),
+(200, 49, '18', 0),
+(201, 49, '14', 0),
+(202, 49, '12', 0),
+(203, 50, '18', 1),
+(204, 50, '20', 0),
+(205, 50, '22', 0),
+(206, 50, '24', 0),
+(207, 51, '20', 1),
+(208, 51, '21', 0),
+(209, 51, '22', 0),
+(210, 51, '24', 0);
 
 -- --------------------------------------------------------
 
@@ -211,7 +251,7 @@ CREATE TABLE `exam` (
   `id` int(11) NOT NULL,
   `subject_id` int(11) DEFAULT NULL,
   `exam_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `duration` tinyint(4) DEFAULT NULL,
+  `duration` tinyint(4) DEFAULT NULL COMMENT 'minutes',
   `number_of_questions` tinyint(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -222,7 +262,8 @@ CREATE TABLE `exam` (
 INSERT INTO `exam` (`id`, `subject_id`, `exam_name`, `duration`, `number_of_questions`) VALUES
 (1, 1, 'Đề thi minh họa môn Toán THPTQG của BGD năm 2019', 90, 50),
 (2, 1, '30 câu trắc nghiệm liên quan đến nhị thức Newton', 45, 30),
-(3, 5, 'Đề thi tham khảo THPT QG 2019 môn Sinh học có đáp án', 50, 40);
+(3, 5, 'Đề thi tham khảo THPT QG 2019 môn Sinh học có đáp án', 50, 40),
+(4, 1, 'Bảng cửu chương 2', 1, 10);
 
 -- --------------------------------------------------------
 
@@ -279,7 +320,17 @@ INSERT INTO `exam_info` (`exam_id`, `question_id`) VALUES
 (3, 37),
 (3, 38),
 (3, 39),
-(3, 40);
+(3, 40),
+(4, 42),
+(4, 43),
+(4, 44),
+(4, 45),
+(4, 46),
+(4, 47),
+(4, 48),
+(4, 49),
+(4, 50),
+(4, 51);
 
 -- --------------------------------------------------------
 
@@ -341,7 +392,17 @@ INSERT INTO `question` (`id`, `content`, `level_of_difficult`, `solution`, `crea
 (38, 'Một loài thực vật, tính trạng chiều cao thân do 2 cặp gen A, a và B, b phân li độc lập cùng quy định: kiểu gen có cả 2 loại alen trội A và B quy định thân cao, các kiểu gen còn lại đều quy định thân thấp. Alen D quy định hoa vàng trội hoàn toàn so với alen d quy định hoa trắng. Cho cây dị hợp tử về 3 cặp gen (P) tự thụ phấn, thu được F1 có kiểu hình phân li theo tỉ lệ 6 cây thân cao, hoa vàng : 6 cây thân thấp, hoa vàng : 3 cây thân cao, hoa trắng : 1 cây thân thấp, hoa trắng. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. Kiểu gen của cây P có thể là .\r\n<br>\r\nII. F1 có 1/4 số cây thân cao, hoa vàng dị hợp tử về 3 cặp gen.\r\n<br>\r\nIII. F1 có tối đa 7 loại kiểu gen.\r\n<br>\r\nIV. F1 có 3 loại kiểu gen quy định cây thân thấp, hoa vàng. ', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
 (39, 'Một quần thể thực vật tự thụ phấn, alen A quy định hoa đỏ trội hoàn toàn so với alen a quy định hoa trắng. Thế hệ xuất phát (P) có 20% số cây hoa trắng. Ở F3, số cây hoa trắng chiếm 25%. Cho rằng quần thể không chịu tác động của các nhân tố tiến hóa khác. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. Tần số kiểu gen ở thế hệ P là 24/35 AA : 4/35 Aa : 7/35 aa.\r\n<br>\r\nII. Tần số alen A ở thế hệ P là 9/35.\r\n<br>\r\nIII. Tỉ lệ kiểu hình ở F1 là 27 cây hoa đỏ : 8 cây hoa trắng.\r\n<br>\r\nIV. Hiệu số giữa tỉ lệ cây hoa đỏ có kiểu gen đồng hợp tử với tỉ lệ cây hoa trắng giảm dần qua các thế hệ.', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
 (40, 'Một loài động vật, xét 3 gen cùng nằm trên 1 nhiễm sắc thể thường theo thứ tự là gen 1 – gen 2- gen 3. Cho biết mỗi gen quy định một tính trạng, mỗi gen đều có 2 alen, các alen trội là trội hoàn toàn và không xảy ra đột biến. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. Cho các cá thể được mang kiểu hình trội về 2 trong 3 tình trạng lai với các cá thể mang kiểu hình lặn về 2 trong 3 tính trạng thì trong loài có tối đa 90 phép lai.\r\n<br>\r\nII. Loài này có tối đa 6 loại kiểu gen đồng hợp tử về cả 3 cặp gen.\r\n<br>\r\nIII. Cho các cá thể đực mang kiểu hình trội về 3 tính trạng, dị hợp tử về 2 cặp gen lai với cá thể cái mang kiểu hình lặn về 1 trong 3 tính trạng, có thể thu được đời con có 1 loại kiểu hình.\r\n<br>\r\nIV. Cho cá thể được mang kiểu hình trội về 1 trong 3 tính trạng lai với cá thể cái mang kiểu hình trội về 1 trong 3 tính trạng, có thể thu được đời con có kiểu hình phân li theo tỉ lệ 2 : 2 : 1 : 1. ', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(41, 'noi dung cau hoi', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32');
+(41, 'noi dung cau hoi', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
+(42, '2*1=?', 1, NULL, '2018-12-26 12:49:24', '2018-12-26 12:49:24'),
+(43, '2*2=?', 1, NULL, '2018-12-26 12:49:24', '2018-12-26 12:49:24'),
+(44, '2*3=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
+(45, '2*4=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
+(46, '2*5=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
+(47, '2*6=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
+(48, '2*7=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
+(49, '2*8=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
+(50, '2*9=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
+(51, '2*10=?', 1, 'Theo bảng cửu chương II thì 2*10 = 20', '2018-12-26 12:49:25', '2018-12-26 19:07:54');
 
 -- --------------------------------------------------------
 
@@ -362,7 +423,8 @@ CREATE TABLE `result` (
 --
 
 INSERT INTO `result` (`user_id`, `exam_id`, `completion_time`, `point`, `number_done_question`) VALUES
-(3, 3, '2018-12-25 19:54:17', 0, 0);
+(3, 4, '2018-12-26 19:33:14', 10, 10),
+(3, 4, '2018-12-26 19:33:27', 10, 10);
 
 -- --------------------------------------------------------
 
@@ -398,6 +460,7 @@ INSERT INTO `subject` (`id`, `title`) VALUES
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
+  `full_name` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Change me',
   `email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` int(11) DEFAULT NULL COMMENT '0=pending,1=ok',
@@ -409,8 +472,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `status`, `access_code`, `level`) VALUES
-(3, 'gicungduoc2809@gmail.com', '$2y$12$619626d8a317ff9f4b304uvkd/TiMCXw60dya.ykc.yNxh4bfO2v2', 1, '619626d8a317ff9f4b3043d14cfac436', 'Customer');
+INSERT INTO `users` (`id`, `full_name`, `email`, `password`, `status`, `access_code`, `level`) VALUES
+(3, 'Phạm Thanh Tùng', 'gicungduoc2809@gmail.com', '$2y$12$619626d8a317ff9f4b304uvkd/TiMCXw60dya.ykc.yNxh4bfO2v2', 1, '619626d8a317ff9f4b3043d14cfac436', 'Customer');
 
 --
 -- Indexes for dumped tables
@@ -470,19 +533,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `answer`
 --
 ALTER TABLE `answer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
 
 --
 -- AUTO_INCREMENT for table `exam`
 --
 ALTER TABLE `exam`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `question`
 --
 ALTER TABLE `question`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `subject`

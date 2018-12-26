@@ -13,6 +13,14 @@
                                 <i class="fas fa-sign-out-alt"></i><span> Logout</span>
                             </a>
                         </li>
+                        <!-- <div class="user-menu">
+                            <a href="" class="nav-link"></a>
+                            <div class="user-content">
+                                <a href="logout.php">
+                                    <i class="fas fa-sign-out-alt"></i><span> Logout</span>
+                                </a>
+                            </div>
+                        </div> -->
                     <?php    
                     }else{
                     ?>

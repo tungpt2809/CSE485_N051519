@@ -15,6 +15,7 @@ require_once('views/v_login.php');
                 if($emailExists && password_verify($pwd, $m_user->pwd) && $m_user->status == 1)
                 {
                     $_SESSION['logged_in'] = true;
+                    $_SESSION['full_name'] = $m_user->full_name;
                     $_SESSION['access_level'] = $m_user->level;
                     $_SESSION['user_id'] = $m_user->id;
                     if($m_user->level=='Admin')

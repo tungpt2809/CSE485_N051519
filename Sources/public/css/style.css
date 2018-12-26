@@ -25,8 +25,38 @@ header .navbar .navbar-brand{
 .bgr-eee:hover i{
     color: #1997d4;
 }
+/* .user-menu{
+    position: relative;
+}
+.user-menu > a{
+    width: 100px;
+    text-align: center;
+    height: 100%;
+}
+.user-menu:hover .user-content{
+    visibility: visible;
+}
+.user-menu .user-content{
+    background: #ffffff;
+    position: absolute;
+    min-width: 133px;
+    top: 30px;
+    right: -20px;
+    visibility: hidden;
+}
+.user-menu .user-content a{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    text-align: left;
+    padding: 10px; 
+}*/
+
 /* end navbar */
 /* sidebar */
+#content{
+    margin: 50px auto;
+}
 #content .fixed-sidebar .sidebar{
     height: 100%;
     margin: 20px 0 20px;
@@ -134,6 +164,7 @@ header .navbar .navbar-brand{
     border-radius: 24px;
     transition: 0.25s;
 }
+.loginForm input[type="text"]:focus,
 .loginForm input[type="email"]:focus,
 .loginForm input[type="password"]:focus{
     width: 400px;
