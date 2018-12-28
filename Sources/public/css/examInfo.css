@@ -3,24 +3,9 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
-
-/* navbar */
-header .navbar{
-    box-shadow: 1px 1px #34495e;
-    width: 100%;
-}
-header .navbar .navbar-brand{
-    color: #1997d4;
-}
-.bgr-eee:hover {
-    background: #34495e;
-    border-radius: 50px;
-    width: 150px;
-    text-align: center;
-}
-.bgr-eee:hover span,
-.bgr-eee:hover i{
-    color: #1997d4;
+body{
+    background: #eee;
+    zoom: .9;
 }
 /* end navbar */
 #exam-head{
@@ -96,6 +81,8 @@ header .navbar .navbar-brand{
     font-size: 32px;
     border-bottom: 2px solid #00F;
     text-align: center;        
+    position: fixed;
+    right: 205px;        
 }
 /* end timer */
 /*submit button*/

@@ -3,59 +3,16 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
-/* navbar */
 body{
-    opacity: 1;
-    background: #34495e;
+    background: #eee;
+    zoom: .9;
 }
-header .navbar{
-    box-shadow: 1px 1px #34495e;
-    width: 100%;
-}
-header .navbar .navbar-brand{
-    color: #1997d4;
-}
-.bgr-eee:hover {
-    background: #34495e;
-    border-radius: 50px;
-    width: 150px;
-    text-align: center;
-}
-.bgr-eee:hover span,
-.bgr-eee:hover i{
-    color: #1997d4;
-}
-/* .user-menu{
-    position: relative;
-}
-.user-menu > a{
-    width: 100px;
-    text-align: center;
-    height: 100%;
-}
-.user-menu:hover .user-content{
-    visibility: visible;
-}
-.user-menu .user-content{
-    background: #ffffff;
-    position: absolute;
-    min-width: 133px;
-    top: 30px;
-    right: -20px;
-    visibility: hidden;
-}
-.user-menu .user-content a{
-    display: block;
-    text-decoration: none;
-    color: #000000;
-    text-align: left;
-    padding: 10px; 
-}*/
-
-/* end navbar */
 /* sidebar */
 #content{
-    margin: 50px auto;
+    padding: 50px 50px;
+    background: #fff;
+    min-height: 37em;
+    height: 100%;
 }
 #content .fixed-sidebar .sidebar{
     height: 100%;
@@ -67,34 +24,31 @@ header .navbar .navbar-brand{
 #content .fixed-sidebar{
     position: fixed;
 }
-.sidebar li {
+.sidebar .subj-item {
     list-style: none;
     padding: 4px;
     text-align: left;
     border-right: 2px solid #ccc;
-    color: #ccc;
+    color: #000;
+    display: block;
 }
 .subj-item a {
     text-decoration: none;
-    color: #ccc;
+    color: #000;
 }
-.sidebar li:hover {
+.sidebar .subj-item:hover {
     cursor: pointer;
     border-right: 2px solid #3498db;
     overflow: hidden;
     color: #3498db;
 }
-.sidebar li:hover a{
+.sidebar .subj-item:hover a{
     color: #3498db;
-}
-.sidebar li:hover .subj-item{
-    transform: translateX(8px);
 }
 .fixed-sidebar .label{
     margin-top: 20px;
     display: block;
     text-transform: uppercase;
-    color: #ccc;
 }
 /* end sidebar */
 /* content */
@@ -104,21 +58,15 @@ header .navbar .navbar-brand{
     left: 350px;
 }
 .quiz-set .quiz-item{
-    border: 2px solid #3498db;
+    border: 1px solid #ccc;
     min-height: 140px;
     padding-left: 10px;
     margin-bottom: 20px;
     box-sizing: border-box;
     font-size: 16px;
-    background: #191919;
-    border-radius: 24px;
-    color: #ccc;
-}
-.quiz-set .quiz-item a{
-    color: #ccc;
 }
 .quiz-set .quiz-item:hover{
-    border: 2px solid #2ecc71;
+    box-shadow: 0 0 10px #ccc;
 }
 .do-this-exam{
     font-size: 30px;
@@ -129,71 +77,48 @@ header .navbar .navbar-brand{
     border-bottom-right-radius: 24px;
     padding-top: 20px;
 }
-.do-this-exam a{
-    color: #ccc;
+.do-this-exam a {
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
 }
 .quiz-set .quiz-item:hover .do-this-exam{
     visibility: visible;
 }
 /* end content */
 /* login form */
-.loginForm{
-    width: 600px;
-    padding: 40px;
+.login-form {
+    width: 500px;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
+    box-shadow:3px 2px 1px #ccc;
+    border: 1px solid #ccc;
     transform: translate(-50%, -50%);
-    background: #191919;
-    text-align: center;
+    background: #fff;
+    padding: 20px;
+    margin: 30px auto;
 }
-.loginForm input[type="text"],
-.loginForm input[type="email"],
-.loginForm input[type="password"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #3498db;
-    padding: 14px 10px;
-    width: 300px;
-    outline: none;
-    color: #ccc;
-    border-radius: 24px;
-    transition: 0.25s;
+.login-form input[type=submit]{
+    background: none; 
+    border: 2px solid #1997d4;
+    transition: 0.4s;
+    color: #000;
 }
-.loginForm input[type="text"]:focus,
-.loginForm input[type="email"]:focus,
-.loginForm input[type="password"]:focus{
-    width: 400px;
-    border-color: #2ecc71;
+.login-form input[type=submit]:hover{
+    background: #1997d4; 
+    color: #FFF;
 }
-.loginForm input[type="submit"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #2ecc71;
-    padding: 14px 40px;
-    outline: none;
-    color: #ccc;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-}
-.loginForm input[type="submit"]:hover{
-    background: #2ecc71;
-}
-.loginForm h1{
-    color: #ccc;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 8px;
+.login-form a{
+    text-decoration: none;
 }
 /*end login form*/
+/* user-form */
+.user-form{
+    margin: 0 auto;
+    padding: 20px;
+}
+/*end user-form*/
+
 /* cyrillic-ext */
 @font-face {
     font-family: 'Montserrat';

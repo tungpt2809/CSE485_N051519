@@ -1,29 +1,34 @@
-<?php include_once('config/core.php');?>
+<?php require_once('config/home_url.php');?>
+<script src="public/js/jquery331.js"></script>
+<script src="public/js/popper1143.min.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="public/css/header.css">
 <div class="container-fluid">
-    <header>
-        <div class="row">
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-                <a class="navbar-brand" href="<?php echo $home_url; ?>">Online Examination</a>
+    <header class="row">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="<?php echo $home_url; ?>">Online Examination</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <?php 
                     if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
                     ?>    
-                        <li class="nav-item">
-                            <a class="nav-link bgr-eee" href="<?php echo $home_url; ?>logout.php">
-                                <i class="fas fa-sign-out-alt"></i><span> Logout</span>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="min-width:250px;">
+                                <?= 'Hi, '.$_SESSION['full_name']?>
                             </a>
-                        </li>
-                        <!-- <div class="user-menu">
-                            <a href="" class="nav-link"></a>
-                            <div class="user-content">
-                                <a href="logout.php">
-                                    <i class="fas fa-sign-out-alt"></i><span> Logout</span>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="<?=$home_url?>user.php">
+                                    <i class="fas fa-user"></i><span> Thông tin cá nhân</span>
                                 </a>
+                                <a class="dropdown-item" href="<?php echo $home_url; ?>logout.php">
+                                    <i class="fas fa-sign-out-alt"></i><span> Logout</span>
+                                </a>    
                             </div>
-                        </div> -->
+                        </li>
                     <?php    
                     }else{
-                    ?>
+                    ?> 
                         <li class="nav-item bgr-eee">
                             <a class="nav-link" href="<?php echo $home_url; ?>login.php">
                                 <i class="fas fa-sign-in-alt"></i><span> Login</span>
@@ -36,7 +41,8 @@
                         </li>
                     <?php } ?>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
+        <br>
     </header>
-
+</div>

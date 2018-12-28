@@ -2,50 +2,50 @@
     include_once('models/database.php');
     class M_user extends Database
     {
-        public $pwd;
+        public $id;
         public $status;
         public $level;
-
-        function addUser($email, $password, $status, $access_code, $level)
+        public $phone_number;
+        public $address;
+        public $full_name;
+        
+        public function addUser($email, $password, $status, $access_code, $level)
         {
             $sql = "INSERT INTO users(email, password, status, access_code, level) VALUES(?,?,?,?,?)";
             $this->setQuery($sql);
             $result = $this->execute(array($email, $password, $status, $access_code, $level));
             return $result;
         }
-
-        function emailExists($email)
+        public function emailExists($email)
         {
-            $sql = "SELECT id, password, status, level FROM users WHERE email = ?";
+            $sql = "SELECT id, password, status, level, full_name, phone_number, address FROM users WHERE email = ?";
+            $this->setQuery($sql);
             
-            $stmt = $this->conn->prepare( $sql );
             $email=htmlspecialchars(strip_tags($email));
-            $stmt->bindParam(1, $email);
-
-            // execute the query
-            $stmt->execute();
-            // get number of rows
-            $num = $stmt->rowCount();
-            if($num>0)
+            $user = $this->loadRow(array($email));
+            
+            if($user != false)
             {
-                $row = $stmt->fetch(PDO::FETCH_ASSOC);
-                $this->id = $row['id'];
-                $this->pwd = $row['password'];
-                $this->status = $row['status'];
-                $this->level = $row['level'];
+                $this->id = $user->id;
+                $this->pwd = $user->password;
+                $this->status = $user->status;
+                $this->level = $user->level;
+                $this->full_name = $user->full_name;
+                $this->phone_numer = $user->phone_number;
+                $this->address = $user->address;
                 return true;
             }    
             return false;
         }
 
-        function updateStatusByAccessCode($access_code){
+        public function updateStatusByAccessCode($access_code){
             $sql = "UPDATE users SET status = 1  WHERE access_code = ?";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(1, $access_code);
             $stmt->execute();
         }
 
-        function accessCodeExists($access_code){
+        public function accessCodeExists($access_code){
             $sql = "SELECT id FROM users WHERE access_code = ? ";
             $stmt = $this->conn->prepare( $sql );
             $access_code = htmlspecialchars(strip_tags($access_code));
@@ -57,6 +57,15 @@
                 return true;
             }
             return false;
+        }
+
+        public function updateUserInfo($full_name, $phone_number, $address, $email)
+        {
+            $sql = "UPDATE users SET full_name = ?, phone_number = ?, address = ? WHERE email = ?";
+            $this->setQuery($sql);
+            $email = htmlspecialchars(strip_tags($email));
+            
+            return $this->execute(array($full_name, $phone_number, $address, $email));
         }
     }
 ?>

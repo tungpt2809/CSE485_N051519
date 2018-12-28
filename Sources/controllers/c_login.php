@@ -18,6 +18,10 @@ require_once('views/v_login.php');
                     $_SESSION['full_name'] = $m_user->full_name;
                     $_SESSION['access_level'] = $m_user->level;
                     $_SESSION['user_id'] = $m_user->id;
+                    $_SESSION['email'] = $email;
+                    $_SESSION['phone_number'] = $m_user->phone_number;
+                    $_SESSION['address'] = $m_user->address;
+
                     if($m_user->level=='Admin')
                     {
                         header("Location: {$home_url}admin/index.php?action=login_success");

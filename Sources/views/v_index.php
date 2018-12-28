@@ -1,6 +1,7 @@
 <?php    
     include_once('config/home_url.php');
     include_once('views/layout/home_head.php');
+    
     function whatSubject($subject_id)
     {
         switch($subject_id)
@@ -26,17 +27,16 @@
         }    
     }
 ?>
+<link rel="stylesheet" href="public/css/style.css">
 <div id="content" class="container">
     <div class="fixed-sidebar col-md-2">
         <span class="label">Môn Học</span>
         <ul class="sidebar">
             <?php for($i=1; $i<=9; $i++){?>
-            <li>
-                <div class="subj-item">
-                    <a href="<?php echo $home_url?>?subject_id=<?php echo $i ?>">
-                        <?php echo whatSubject($i);?>
-                    </a>
-                </div>
+            <li class="subj-item">
+                <a  href="<?php echo $home_url?>?subject_id=<?php echo $i ?>">
+                    <?php echo whatSubject($i);?>
+                </a>
             </li>
             <?php }?>
         </ul>
@@ -63,22 +63,17 @@
                 </div>
             </div>
             <div class="col-md-2 do-this-exam">
-                        <?php
-                        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
-						?>
-						<a href="<?php echo $home_url?>exam.php?eid=<?php echo $exam[$i]->id?>">
-                            <i class="fas fa-pen">
-                                <span>Làm bài</span>
-                            </i>
-                        </a>
-						<?php }else{ ?>
-							<a href="<?php echo $home_url?>login.php" onclick="return confirm('Đăng nhập để làm bài')">
-                                <i class="fas fa-pen">
-                                    <span>Làm bài</span>
-                                </i>
-                            </a>
-						<?php }?>                
-                        
+                <?php
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
+                ?>
+                <a href="<?php echo $home_url?>exam.php?eid=<?php echo $exam[$i]->id?>">
+                    <i>Làm bài</i>
+                </a>
+                <?php }else{ ?>
+                    <a href="<?php echo $home_url?>login.php" onclick="return confirm('Đăng nhập để làm bài')">
+                        <i>Làm bài</i>
+                    </a>
+                <?php }?>                
             </div>
         </div>
         <?php } ?>

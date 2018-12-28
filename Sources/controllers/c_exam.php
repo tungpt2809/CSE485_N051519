@@ -31,7 +31,6 @@ require_once('models/m_answer.php');
             $question = $c_question->questionByExamId($exam)['question'];
 
             $m_answer = new M_answer();
-
             require_once('views/v_exam.php');
         }
     }

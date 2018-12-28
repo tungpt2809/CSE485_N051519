@@ -7,7 +7,6 @@
     {
         public function showResultPage()
         {
-            require('config/core.php');
             $m_question = new M_question();
             $m_answer = new M_answer();
             $m_result = new M_result();

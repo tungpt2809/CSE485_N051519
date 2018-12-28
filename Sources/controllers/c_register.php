@@ -5,7 +5,7 @@ require_once('views/v_register.php');
     {
         public function register()
         {
-            require_once('config/home_url.php');
+            $home_url="http://localhost:8888/CSE485_N0665/Sources/";
             $m_user = new M_user();
             if(isset($_POST['register']))
             {
@@ -13,16 +13,17 @@ require_once('views/v_register.php');
                 $pwd = $_POST['pwd'];
                 $pwd_cfrm = $_POST['pwd_cfrm'];
                 $status = 0;
-                $access_code = md5($pwd);
+                $access_code = md5(microtime().mt_rand());
                 $level = 'Customer';
-                if($pwd_cfrm == $pwd){
+                if($pwd_cfrm == $pwd)
+                {
                     if(!$m_user->emailExists($email))
                     {
                         $hash = password_hash($pwd, PASSWORD_BCRYPT);
                         if($m_user->addUser($email,$hash,$status,$access_code,$level)){
                             $send_to_email = $email;
                             $body="Hi {$send_to_email}.<br /><br />";
-                            $body.="Please click the following link to verify your email and login: {$home_url}?access_code={$access_code}";
+                            $body.="Please click the following link to verify your email and login: {$home_url}verify.php?access_code={$access_code}";
                             $subject="Verification Email";
                             if($this->sendEmailViaPhpMail($send_to_email, $subject, $body))
                                 echo "<div class='alert alert-success'> Verification link was sent to your email. Click that link to login. </div>";
