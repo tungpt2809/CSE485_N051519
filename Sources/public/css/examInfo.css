@@ -90,6 +90,7 @@ form input[type=submit]{
     background: none; 
     border: 2px solid #1997d4;
     transition: 0.4s;
+    outline: none;
 }
 form input[type=submit]:hover{
     background: #1997d4; 

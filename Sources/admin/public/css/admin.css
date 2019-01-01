@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-image: linear-gradient(to right, #6EC3C9, #CAE5E8);
+    zoom: .9;
+}
+/* user list */
+table{
+    margin: 50px auto;
+    background: #fff;
+    min-height: 300px;
+}
+tr{
+    min-height: 60px;
+}
+    /* action (edit delete) button */
+.action {
+    text-align: center;
+}
+.action button{
+    background: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+}
+.action button:hover{
+    cursor: pointer;
+}
+    /* end action (edit delete) button */
+/*end user list */
+/* new user */
+#new-user{
+    margin: 200px auto 100px auto;
+}
+/* end new user */
+/* alert */
+.alert{
+    width: 40%;
+    margin-top: 5px;
+}
+/* end alert*/
+.mrg-top-30{ margin-top: 30px;}
+h1{ color: white; }

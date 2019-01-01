@@ -1,8 +1,4 @@
 <?php require_once('config/home_url.php');?>
-<script src="public/js/jquery331.js"></script>
-<script src="public/js/popper1143.min.js"></script>
-<script src="public/js/bootstrap.min.js"></script>
-
 <link rel="stylesheet" href="public/css/header.css">
 <div class="container-fluid">
     <header class="row">
@@ -14,7 +10,7 @@
                     if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
                     ?>    
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="min-width:250px;">
+                            <a class="nav-link dropdown-toggle text-center" href="#" id="navbardrop" data-toggle="dropdown" style="min-width:250px;">
                                 <?= 'Hi, '.$_SESSION['full_name']?>
                             </a>
                             <div class="dropdown-menu">

@@ -79,3 +79,4 @@
         <?php } ?>
     </div>
 </div>
+<?php include_once('views/layout/home_foot.php');?>

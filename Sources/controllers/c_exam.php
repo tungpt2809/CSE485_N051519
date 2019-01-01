@@ -24,7 +24,7 @@ require_once('models/m_answer.php');
                         
             $m_exam = new M_exam();
             $exam = $m_exam->getExamById($exam_id);
-            $_SESSION['exam_id'] = NULL;
+            
             $_SESSION['exam_id'] = $exam_id;
 
             $c_question = new C_question();

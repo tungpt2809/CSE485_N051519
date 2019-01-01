@@ -18,7 +18,7 @@
         {
             $sql = "SELECT * FROM exam WHERE subject_id = ?";
             $this->setQuery($sql);
-            return $this->LoadAllRows(array($subject_id));
+            return $this->loadAllRows(array($subject_id));
         }
     }
 ?>
