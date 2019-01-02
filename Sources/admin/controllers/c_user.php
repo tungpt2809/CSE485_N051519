@@ -5,7 +5,9 @@ require_once('models/m_user.php');
         public function showUserPage()
         {
             unset($_SESSION['isInserted']);
-            $isInserted = $this->insertUser();
+            unset($_SESSION['isUpdated']);
+            $this->insertUser();
+            $this->updateUser();
             $m_user = new M_user();
 
             $total_rows = $m_user->countAll();
@@ -26,7 +28,8 @@ require_once('models/m_user.php');
         }
         public function insertUser()
         {
-            if(isset($_POST["btn_add"])){
+            if(isset($_POST["btn_add"]))
+            {
                 $m_user = new M_user();
                 $full_name = $_POST['full_name'];
                 $phone_number = $_POST['phone_number'];
@@ -39,7 +42,26 @@ require_once('models/m_user.php');
                 
                 if($m_user->insertUser($full_name, $phone_number, $address, $email, $password, $level, $status))
                     $_SESSION['isInserted'] = "<div class='alert alert-success alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button>Thêm thành công</div>";
-                else $_SESSION['isInserted'] = "<div class='alert alert-danger alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button> Không thể thêm</div>";
+                else $_SESSION['isInserted'] = "<div class='alert alert-danger alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button>Không thể thêm<br>Email đã tồn tại</div>";
+            }
+        }
+        public function updateUser()
+        {
+            if(isset($_POST["btn_edit"]))
+            {
+                $edit = new M_user();
+                $full_name = $_POST['edit_full_name'];
+                $phone_number = $_POST['edit_phone_number'];
+                $address = $_POST['edit_address'];
+                $email = $_POST['edit_email'];
+                $email = htmlspecialchars(strip_tags($email));
+                $password = $_POST['edit_pwd'];
+                $level = $_POST['edit_level'];
+                $status = $_POST['edit_status'];
+
+                if($edit->updateUser($full_name, $phone_number, $address, $email, $password, $level, $status))
+                    $_SESSION['isUpdated'] = "<div style='position: relative' class='alert alert-success alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button>Sửa thành công $full_name</div>";
+                else $_SESSION['isUpdated'] = "<div class='alert alert-danger alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button>Không thể sửa</div>";
             }
         }
     }

@@ -21,7 +21,6 @@ tr{
     text-align: center;
 }
 .action button{
-    background: none;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -29,6 +28,16 @@ tr{
 }
 .action button:hover{
     cursor: pointer;
+}
+.action .btn-delete{
+    background: red;
+    border-color: red;
+    color: #000;
+}
+.action .btn-edit{
+    background: yellow;
+    border-color: yellow;
+    color: #000;
 }
     /* end action (edit delete) button */
 /*end user list */
@@ -43,5 +52,25 @@ tr{
     margin-top: 5px;
 }
 /* end alert*/
-.mrg-top-30{ margin-top: 30px;}
-h1{ color: white; }
+.mrg-top-30{margin-top: 30px;}
+.mrg-30{margin: 30px 30px 0 30px;}
+h1{color: white;}
+/*question*/
+.question{
+    background: #fff;        
+    padding: 20px;
+    margin: 20px auto;
+    border: 2px solid #06f;
+    border-radius: 5%;
+}
+/*end question*/
+/*solution*/
+.solution{
+    width: 100%;
+    padding: 20px;
+    background: #ffffe8;
+    border: 1px solid #fdce98;
+    margin: 10px 0px;
+    display: none;
+}
+/*end solution*/

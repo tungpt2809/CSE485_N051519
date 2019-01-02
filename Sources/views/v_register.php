@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="public/css/style.css">
 <form action="" method="POST" class="login-form">
     <h1>R 3 G I S T E R</h1>
     <div class="form-group">

@@ -2,10 +2,10 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 26, 2018 at 01:37 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.11
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th1 02, 2019 lúc 03:58 PM
+-- Phiên bản máy phục vụ: 10.1.36-MariaDB
+-- Phiên bản PHP: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `online_examination_system`
+-- Cơ sở dữ liệu: `online_examination_system`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `answer`
+-- Cấu trúc bảng cho bảng `answer`
 --
 
 CREATE TABLE `answer` (
@@ -36,94 +36,10 @@ CREATE TABLE `answer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `answer`
+-- Đang đổ dữ liệu cho bảng `answer`
 --
 
 INSERT INTO `answer` (`id`, `question_id`, `content`, `correct`) VALUES
-(1, 1, 'Noi dung cau tra loi', 1),
-(2, 1, 'Noi dung cau tra loi', 0),
-(3, 1, 'Noi dung cau tra loi', 0),
-(4, 1, 'Noi dung cau tra loi', 0),
-(5, 2, 'Noi dung cau tra loi', 1),
-(6, 2, 'Noi dung cau tra loi', 0),
-(7, 2, 'Noi dung cau tra loi', 0),
-(8, 2, 'Noi dung cau tra loi', 0),
-(14, 3, 'Noi dung cau tra loi', 0),
-(15, 3, 'Noi dung cau tra loi', 0),
-(16, 3, 'Noi dung cau tra loi', 0),
-(17, 3, 'Noi dung cau tra loi', 1),
-(18, 4, 'Noi dung cau tra loi', 0),
-(19, 4, 'Noi dung cau tra loi', 0),
-(20, 4, 'Noi dung cau tra loi', 0),
-(21, 4, 'Noi dung cau tra loi', 1),
-(22, 5, 'Noi dung cau tra loi', 0),
-(23, 5, 'Noi dung cau tra loi', 0),
-(24, 5, 'Noi dung cau tra loi', 0),
-(25, 5, 'Noi dung cau tra loi', 1),
-(26, 6, 'Noi dung cau tra loi', 0),
-(27, 6, 'Noi dung cau tra loi', 0),
-(28, 6, 'Noi dung cau tra loi', 0),
-(29, 6, 'Noi dung cau tra loi', 1),
-(30, 7, 'Noi dung cau tra loi', 0),
-(31, 7, 'Noi dung cau tra loi', 0),
-(32, 7, 'Noi dung cau tra loi', 0),
-(33, 7, 'Noi dung cau tra loi', 1),
-(34, 8, 'Noi dung cau tra loi', 0),
-(35, 8, 'Noi dung cau tra loi', 0),
-(36, 8, 'Noi dung cau tra loi', 0),
-(37, 8, 'Noi dung cau tra loi', 1),
-(38, 9, 'Noi dung cau tra loi', 0),
-(39, 9, 'Noi dung cau tra loi', 0),
-(40, 9, 'Noi dung cau tra loi', 0),
-(41, 9, 'Noi dung cau tra loi', 1),
-(42, 10, 'Noi dung cau tra loi', 0),
-(43, 10, 'Noi dung cau tra loi', 0),
-(44, 10, 'Noi dung cau tra loi', 0),
-(45, 10, 'Noi dung cau tra loi', 1),
-(46, 11, 'Noi dung cau tra loi', 0),
-(47, 11, 'Noi dung cau tra loi', 0),
-(48, 11, 'Noi dung cau tra loi', 0),
-(49, 11, 'Noi dung cau tra loi', 1),
-(50, 12, 'Noi dung cau tra loi', 0),
-(51, 12, 'Noi dung cau tra loi', 0),
-(52, 12, 'Noi dung cau tra loi', 0),
-(53, 12, 'Noi dung cau tra loi', 1),
-(54, 13, 'Noi dung cau tra loi', 0),
-(55, 13, 'Noi dung cau tra loi', 0),
-(56, 13, 'Noi dung cau tra loi', 0),
-(57, 13, 'Noi dung cau tra loi', 1),
-(58, 14, 'Noi dung cau tra loi', 0),
-(59, 14, 'Noi dung cau tra loi', 0),
-(60, 14, 'Noi dung cau tra loi', 0),
-(61, 14, 'Noi dung cau tra loi', 1),
-(62, 15, 'Noi dung cau tra loi', 0),
-(63, 15, 'Noi dung cau tra loi', 0),
-(64, 15, 'Noi dung cau tra loi', 0),
-(65, 15, 'Noi dung cau tra loi', 1),
-(66, 16, 'Noi dung cau tra loi', 0),
-(67, 16, 'Noi dung cau tra loi', 0),
-(68, 16, 'Noi dung cau tra loi', 0),
-(69, 16, 'Noi dung cau tra loi', 1),
-(70, 17, 'Noi dung cau tra loi', 0),
-(71, 17, 'Noi dung cau tra loi', 0),
-(72, 17, 'Noi dung cau tra loi', 0),
-(73, 17, 'Noi dung cau tra loi', 1),
-(74, 18, 'Noi dung cau tra loi', 0),
-(75, 18, 'Noi dung cau tra loi', 0),
-(76, 18, 'Noi dung cau tra loi', 0),
-(77, 18, 'Noi dung cau tra loi', 1),
-(78, 19, 'Noi dung cau tra loi', 0),
-(79, 19, 'Noi dung cau tra loi', 0),
-(80, 19, 'Noi dung cau tra loi', 0),
-(81, 19, 'Noi dung cau tra loi', 1),
-(82, 20, 'Noi dung cau tra loi', 0),
-(83, 20, 'Noi dung cau tra loi', 0),
-(84, 20, 'Noi dung cau tra loi', 0),
-(85, 20, 'Noi dung cau tra loi', 1),
-(86, 21, 'Noi dung cau tra loi', 0),
-(87, 21, 'Noi dung cau tra loi', 0),
-(88, 21, 'Noi dung cau tra loi', 0),
-(89, 21, 'Noi dung cau tra loi', 1),
 (90, 23, 'Noi dung cau tra loi', 0),
 (91, 23, 'Noi dung cau tra loi', 0),
 (92, 23, 'Noi dung cau tra loi', 0),
@@ -196,10 +112,10 @@ INSERT INTO `answer` (`id`, `question_id`, `content`, `correct`) VALUES
 (159, 40, 'Noi dung cau tra loi', 0),
 (160, 40, 'Noi dung cau tra loi', 0),
 (162, 40, 'Noi dung cau tra loi', 1),
-(163, 22, 'Noi dung cau tra loi', 0),
-(164, 22, 'Noi dung cau tra loi', 0),
-(165, 22, 'Noi dung cau tra loi', 0),
-(166, 22, 'Noi dung cau tra loi', 1),
+(163, 22, 'CLTN là nhân tố định hướng quá trình tiến hóa.', 1),
+(164, 22, 'CLTN tác động trực tiếp lên kiểu gen làm biến đổi tần số alen của quần thể.', 0),
+(165, 22, ' CLTN chỉ diễn ra khi môi trường sống thay đổi. ', 0),
+(166, 22, 'CLTN tạo ra kiểu gen mới quy định kiểu hình thích nghi với môi trường.', 0),
 (167, 42, '2', 1),
 (170, 42, '4', 0),
 (171, 42, '15', 0),
@@ -239,12 +155,16 @@ INSERT INTO `answer` (`id`, `question_id`, `content`, `correct`) VALUES
 (207, 51, '20', 1),
 (208, 51, '21', 0),
 (209, 51, '22', 0),
-(210, 51, '24', 0);
+(210, 51, '24', 0),
+(215, 55, 'Google Group With Partner', 0),
+(216, 55, 'GeeGeeWellPnay', 0),
+(217, 55, 'GoodGameWellPlay', 1),
+(218, 55, 'GooseGooseWeePee', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `exam`
+-- Cấu trúc bảng cho bảng `exam`
 --
 
 CREATE TABLE `exam` (
@@ -256,19 +176,19 @@ CREATE TABLE `exam` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `exam`
+-- Đang đổ dữ liệu cho bảng `exam`
 --
 
 INSERT INTO `exam` (`id`, `subject_id`, `exam_name`, `duration`, `number_of_questions`) VALUES
 (1, 1, 'Đề thi minh họa môn Toán THPTQG của BGD năm 2019', 90, 50),
 (2, 1, '30 câu trắc nghiệm liên quan đến nhị thức Newton', 45, 30),
-(3, 5, 'Đề thi tham khảo THPT QG 2019 môn Sinh học có đáp án', 50, 40),
+(3, 5, 'Đề thi tham khảo THPT QG 2019 môn Sinh học có đáp án', 50, 19),
 (4, 1, 'Bảng cửu chương 2', 1, 10);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `exam_info`
+-- Cấu trúc bảng cho bảng `exam_info`
 --
 
 CREATE TABLE `exam_info` (
@@ -277,31 +197,10 @@ CREATE TABLE `exam_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `exam_info`
+-- Đang đổ dữ liệu cho bảng `exam_info`
 --
 
 INSERT INTO `exam_info` (`exam_id`, `question_id`) VALUES
-(3, 1),
-(3, 2),
-(3, 3),
-(3, 4),
-(3, 5),
-(3, 6),
-(3, 7),
-(3, 8),
-(3, 9),
-(3, 10),
-(3, 11),
-(3, 12),
-(3, 13),
-(3, 14),
-(3, 15),
-(3, 16),
-(3, 17),
-(3, 18),
-(3, 19),
-(3, 20),
-(3, 21),
 (3, 22),
 (3, 23),
 (3, 24),
@@ -335,7 +234,7 @@ INSERT INTO `exam_info` (`exam_id`, `question_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `question`
+-- Cấu trúc bảng cho bảng `question`
 --
 
 CREATE TABLE `question` (
@@ -344,70 +243,51 @@ CREATE TABLE `question` (
   `level_of_difficult` int(11) DEFAULT '1' COMMENT '1=easy, 2=normal,3=hard',
   `solution` text COLLATE utf8mb4_unicode_ci,
   `created` datetime DEFAULT CURRENT_TIMESTAMP,
-  `modified` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `modified` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `subject_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `question`
+-- Đang đổ dữ liệu cho bảng `question`
 --
 
-INSERT INTO `question` (`id`, `content`, `level_of_difficult`, `solution`, `created`, `modified`) VALUES
-(1, 'Có thể sử dụng hóa chất nào sau đây để phát hiện quá trình hô hấp ở thực vật thải ra khí CO2? ', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(2, 'Động vật nào trao đổi khí với môi trường thông qua hệ thống ống khí?', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(3, 'Axit amin là đơn phân cấu tạo nên phân tử nào sau đây? ', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(4, 'Phân tử nào sau đây trực tiếp làm khuôn cho quá trình dịch mã? ', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(5, 'Một phân tử ADN ở vi khuẩn có 10% số nuclêôtit loại A. Theo lí thuyết, tỉ lệ nuclêôtit loại G của phân tử này là bao nhiêu?\r\n', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(6, 'Theo lí thuyết, cơ thể có kiểu gen aaBB giảm phân tạo ra loại giao tử aB chiếm tỉ lệ ', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(7, 'Cơ thể có kiểu gen nào đồng hợp tử về tất cả các cặp gen đang xét? ', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(8, 'Theo lí thuyết, phép lai nào sau đây cho đời con có 1 loại kiểu gen? \r\n\r\n', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(9, 'Theo lí thuyết, phép lai nào cho đời con có kiểu gen phân li theo tỉ lệ 1 : 1 ? \r\n\r\n', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(10, 'Cho biết alen D quy định hoa đỏ trội hoàn toàn so với alen d quy định hoa trắng. Theo lí thuyết, phép lai giữa các cây có kiểu gen nào sau đây tạo ra đời con có 2 loại kiểu hình? \r\n\r\n', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(11, 'Một quần thể thực vật giao phấn đang ở trạng thái cân bằng di truyền, xét 1 gen có hai alen là A và a, trong đó tần số alen A là 0,4. Theo lí thuyết, tần số kiểu gen aa của quần thể là \r\n\r\n', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(12, 'Từ một cây hoa quý hiếm, bằng cách áp dụng kĩ thuật nào sau đây có thể nhanh chóng tạo ra nhiều cây có kiểu gen giống nhau và giống với cây hoa ban đầu? \r\n\r\n', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(13, 'Theo thuyết tiến hóa hiện đại, nhân tố tiến hóa nào sau đây chỉ làm thay đổi tần số kiểu gen mà không làm thay đổi tần số alen của quần thể? ', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(14, 'Trong lịch sử phát triển của sinh giới qua các đại địa chất, cây có mạch và động vật lên cạn ở đại nào sau đây? ', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(15, 'Trong một quần xã sinh vật hồ nước, nếu hai loài cá có ổ sinh thái trùng nhau thì giữa chúng thường xảy ra mối quan hệ \r\n\r\n', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(16, 'Cho chuỗi thức ăn: Lúa → Châu chấu → Nhái → Rắn → Diều hâu. Trong chuỗi thức ăn này, sinh vật tiêu thụ bậc 2 là \r\n\r\n', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(17, 'Khi nói về ảnh hưởng của các nhân tố môi trường đến quá trình quang hợp ở thực vật, phát biểu nào sau đây sai? \r\n\r\n', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(18, 'Khi nói về hoạt động của hệ tuần hoàn ở thú, phát biểu nào sau đây sai? \r\n\r\n', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(19, 'Dạng đột biến nào sau đây làm tăng số lượng alen của 1 gen trong tế bào nhưng không làm xuất hiện alen mới? \r\n\r\n', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(20, 'Khi nói về đột biến gen, phát biểu nào sau đây sai? \r\n\r\n', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(21, 'Một loài thực vật, cho 2 cây (P) đều dị hợp tử về 2 cặp gen cùng nằm trên 1 cặp NST giao phấn với nhau, thu được F1. Cho biết các gen liên kết hoàn toàn. Theo lí thuyết, F1 có tối đa bao nhiêu loại kiểu gen? \r\n\r\n', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(22, 'Khi nói về CLTN theo thuyết tiến hóa hiện đại, phát biểu nào sau đây đúng? \r\n\r\n', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(23, 'Khi nói về kích thước quần thể sinh vật, phát biểu nào sau đây đúng?', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(24, 'Khi nói về hệ sinh thái trên cạn, phát biểu nào sau đây đúng?', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(25, 'Khi nói về đột biến lặp đoạn NST, phát biểu nào sau đây sai?', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(26, 'Trong quá trình giảm phân ở cơ thể có kiểu gen AaBb, có một số tế bào xảy ra sự không phân li của tất cả các cặp NST ở giảm phân I, giảm phân II diễn ra bình thường, tạo ra các giao tử đột biến. Nếu giao tử đột biến này kết hợp với giao tử Ab thì tạo thành hợp tử có kiểu gen nào sau đây?', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(27, 'Ở đậu Hà Lan, alen A quy định hoa đỏ trội hoàn toàn so với alen a quy định hoa trắng. Trong thí nghiệm thực hành lai giống, một nhóm học sinh đã lấy tất cả các hạt phấn của 1 cây đậu hoa đỏ thụ phấn cho 1 cây đậu hoa đỏ khác. Theo lí thuyết, dự đoán nào sau đây sai?', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(28, 'Một loài thực vật, cho cây thân cao, lá nguyên giao phấn với cây thân thấp, lá xẻ (P), thu được F1 gồm toàn cây thân cao, lá nguyên. Lai phân tích cây F1, thu được Fa có kiểu hình phân li theo tỉ lệ: 1 cây thân cao, lá nguyên : 1 cây thân cao, lá xẻ : 1 cây thân thấp, lá nguyên : 1 cây thân thấp, lá xẻ. Cho biết mỗi gen quy định 1 tính trạng. Theo lí thuyết, phát biểu nào sau đây đúng?', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(29, 'Khi nói về quá trình hình thành loài mới bằng con đường cách li địa lí, phát biểu nào sau đây đúng?', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(30, 'Khi nói về các đặc trưng cơ bản của quần thể sinh vật, phát biểu nào sau đây đúng?', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(31, 'Giả sử một lưới thức ăn được mô tả như sau: Thỏ, chuột, châu chấu và chim sẻ đều ăn thực vật; châu chấu là thức ăn của chim sẻ; cáo ăn thỏ và chim sẻ; cú mèo ăn chuột. Phát biểu nào sau đây đúng về lưới thức ăn này?', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(32, 'Khi nói về thành phần hữu sinh trong hệ sinh thái, phát biểu nào sau đây đúng?', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(33, 'Ba tế bào sinh tinh của cơ thể có kiểu gen Aa(BD/bd)giảm phân bình thường, trong đó có 1 tế bào xảy ra hoán vị giữa alen D và alen d. Theo lí thuyết, kết thúc giảm phân có thể tạo ra', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(34, 'Một loài thực vật có bộ NST 2n = 24. Giả sử có 1 thể đột biến của loài này chỉ bị đột biến mất đoạn nhỏ không chứa tâm động ở 1 NST thuộc cặp số 5. Cho biết không phát sinh đột biến mới, thể đột biến này giảm phân bình thường và không xảy ra trao đổi chéo. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng về thể đột biến này?', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(35, 'Một loài thực vật, cho cây thân cao, hoa đỏ (P) tự thụ phấn, thu được F1 có 4 loại kiểu hình trong đó có 1% số cây thân thấp, hoa trắng. Biết rằng mỗi gen quy định 1 tính trạng. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. F1 có tối đa 9 loại kiểu gen.\r\n<br>\r\nII. F1 có 32% số cây đồng hợp tử về 1 cặp gen.\r\n<br>\r\nIII. F1 có 24% số cây thân cao, hoa trắng.\r\n<br>\r\nIV. Kiểu gen của P có thể là AB/ab.\r\n  ', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(36, 'Ở ruồi giấm, alen A quy định thân xám trội hoàn toàn so với alen a quy định thân đen; alen B quy định cánh dài trội hoàn toàn so với alen b quy định cánh cụt; alen D quy định mắt đỏ trội hoàn toàn so với alen d quy định mắt trắng. Phép lai P:  , thu được F1 có 5,125% số cá thể có kiểu hình lặn về 3 tính trạng. Theo lí thuyết, số cá thể cái dị hợp tử về 1 trong 3 cặp gen ở F1 chiếm tỉ lệ', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(37, 'Một loài thực vật, cho cây hoa đỏ (P) tự thụ phấn, thu được F1 gồm 56,25% cây hoa đỏ; 18,75% cây hoa hồng; 18,75% cây hoa vàng; 6,25% cây hoa trắng. Lai phân tích cây hoa đỏ dị hợp tử về 2 cặp gen ở F1, thu được Fa. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. F1 có 6 loại kiểu gen quy định kiểu hình hoa đỏ.\r\n<br>\r\nII. Các cây hoa đỏ F1 giảm phân đều cho 4 loại giao tử với tỉ lệ bằng nhau.\r\n<br>\r\nIII. Fa có số cây hoa vàng chiếm 25%.\r\n<br>\r\nIV. Fa có số cây hoa đỏ chiếm tỉ lệ lớn nhất.', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(38, 'Một loài thực vật, tính trạng chiều cao thân do 2 cặp gen A, a và B, b phân li độc lập cùng quy định: kiểu gen có cả 2 loại alen trội A và B quy định thân cao, các kiểu gen còn lại đều quy định thân thấp. Alen D quy định hoa vàng trội hoàn toàn so với alen d quy định hoa trắng. Cho cây dị hợp tử về 3 cặp gen (P) tự thụ phấn, thu được F1 có kiểu hình phân li theo tỉ lệ 6 cây thân cao, hoa vàng : 6 cây thân thấp, hoa vàng : 3 cây thân cao, hoa trắng : 1 cây thân thấp, hoa trắng. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. Kiểu gen của cây P có thể là .\r\n<br>\r\nII. F1 có 1/4 số cây thân cao, hoa vàng dị hợp tử về 3 cặp gen.\r\n<br>\r\nIII. F1 có tối đa 7 loại kiểu gen.\r\n<br>\r\nIV. F1 có 3 loại kiểu gen quy định cây thân thấp, hoa vàng. ', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(39, 'Một quần thể thực vật tự thụ phấn, alen A quy định hoa đỏ trội hoàn toàn so với alen a quy định hoa trắng. Thế hệ xuất phát (P) có 20% số cây hoa trắng. Ở F3, số cây hoa trắng chiếm 25%. Cho rằng quần thể không chịu tác động của các nhân tố tiến hóa khác. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. Tần số kiểu gen ở thế hệ P là 24/35 AA : 4/35 Aa : 7/35 aa.\r\n<br>\r\nII. Tần số alen A ở thế hệ P là 9/35.\r\n<br>\r\nIII. Tỉ lệ kiểu hình ở F1 là 27 cây hoa đỏ : 8 cây hoa trắng.\r\n<br>\r\nIV. Hiệu số giữa tỉ lệ cây hoa đỏ có kiểu gen đồng hợp tử với tỉ lệ cây hoa trắng giảm dần qua các thế hệ.', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(40, 'Một loài động vật, xét 3 gen cùng nằm trên 1 nhiễm sắc thể thường theo thứ tự là gen 1 – gen 2- gen 3. Cho biết mỗi gen quy định một tính trạng, mỗi gen đều có 2 alen, các alen trội là trội hoàn toàn và không xảy ra đột biến. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. Cho các cá thể được mang kiểu hình trội về 2 trong 3 tình trạng lai với các cá thể mang kiểu hình lặn về 2 trong 3 tính trạng thì trong loài có tối đa 90 phép lai.\r\n<br>\r\nII. Loài này có tối đa 6 loại kiểu gen đồng hợp tử về cả 3 cặp gen.\r\n<br>\r\nIII. Cho các cá thể đực mang kiểu hình trội về 3 tính trạng, dị hợp tử về 2 cặp gen lai với cá thể cái mang kiểu hình lặn về 1 trong 3 tính trạng, có thể thu được đời con có 1 loại kiểu hình.\r\n<br>\r\nIV. Cho cá thể được mang kiểu hình trội về 1 trong 3 tính trạng lai với cá thể cái mang kiểu hình trội về 1 trong 3 tính trạng, có thể thu được đời con có kiểu hình phân li theo tỉ lệ 2 : 2 : 1 : 1. ', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(41, 'noi dung cau hoi', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32'),
-(42, '2*1=?', 1, NULL, '2018-12-26 12:49:24', '2018-12-26 12:49:24'),
-(43, '2*2=?', 1, NULL, '2018-12-26 12:49:24', '2018-12-26 12:49:24'),
-(44, '2*3=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
-(45, '2*4=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
-(46, '2*5=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
-(47, '2*6=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
-(48, '2*7=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
-(49, '2*8=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
-(50, '2*9=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25'),
-(51, '2*10=?', 1, 'Theo bảng cửu chương II thì 2*10 = 20', '2018-12-26 12:49:25', '2018-12-26 19:07:54');
+INSERT INTO `question` (`id`, `content`, `level_of_difficult`, `solution`, `created`, `modified`, `subject_id`) VALUES
+(22, 'Khi nói về CLTN theo thuyết tiến hóa hiện đại, phát biểu nào sau đây đúng? \r\n\r\n', 2, '', '2018-12-24 14:27:21', '2019-01-02 21:54:14', 5),
+(23, 'Khi nói về kích thước quần thể sinh vật, phát biểu nào sau đây đúng?', 1, '', '2018-12-24 14:27:21', '2019-01-02 21:54:28', 5),
+(24, 'Khi nói về hệ sinh thái trên cạn, phát biểu nào sau đây đúng?', 1, '', '2018-12-24 14:27:21', '2019-01-02 21:54:38', 5),
+(25, 'Khi nói về đột biến lặp đoạn NST, phát biểu nào sau đây sai?', 1, '', '2018-12-24 14:27:21', '2019-01-02 21:54:47', 5),
+(26, 'Trong quá trình giảm phân ở cơ thể có kiểu gen AaBb, có một số tế bào xảy ra sự không phân li của tất cả các cặp NST ở giảm phân I, giảm phân II diễn ra bình thường, tạo ra các giao tử đột biến. Nếu giao tử đột biến này kết hợp với giao tử Ab thì tạo thành hợp tử có kiểu gen nào sau đây?', 3, '', '2018-12-24 14:27:21', '2019-01-02 21:54:58', 5),
+(27, 'Ở đậu Hà Lan, alen A quy định hoa đỏ trội hoàn toàn so với alen a quy định hoa trắng. Trong thí nghiệm thực hành lai giống, một nhóm học sinh đã lấy tất cả các hạt phấn của 1 cây đậu hoa đỏ thụ phấn cho 1 cây đậu hoa đỏ khác. Theo lí thuyết, dự đoán nào sau đây sai?', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(28, 'Một loài thực vật, cho cây thân cao, lá nguyên giao phấn với cây thân thấp, lá xẻ (P), thu được F1 gồm toàn cây thân cao, lá nguyên. Lai phân tích cây F1, thu được Fa có kiểu hình phân li theo tỉ lệ: 1 cây thân cao, lá nguyên : 1 cây thân cao, lá xẻ : 1 cây thân thấp, lá nguyên : 1 cây thân thấp, lá xẻ. Cho biết mỗi gen quy định 1 tính trạng. Theo lí thuyết, phát biểu nào sau đây đúng?', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(29, 'Khi nói về quá trình hình thành loài mới bằng con đường cách li địa lí, phát biểu nào sau đây đúng?', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(30, 'Khi nói về các đặc trưng cơ bản của quần thể sinh vật, phát biểu nào sau đây đúng?', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(31, 'Giả sử một lưới thức ăn được mô tả như sau: Thỏ, chuột, châu chấu và chim sẻ đều ăn thực vật; châu chấu là thức ăn của chim sẻ; cáo ăn thỏ và chim sẻ; cú mèo ăn chuột. Phát biểu nào sau đây đúng về lưới thức ăn này?', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(32, 'Khi nói về thành phần hữu sinh trong hệ sinh thái, phát biểu nào sau đây đúng?', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(33, 'Ba tế bào sinh tinh của cơ thể có kiểu gen Aa(BD/bd)giảm phân bình thường, trong đó có 1 tế bào xảy ra hoán vị giữa alen D và alen d. Theo lí thuyết, kết thúc giảm phân có thể tạo ra', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(34, 'Một loài thực vật có bộ NST 2n = 24. Giả sử có 1 thể đột biến của loài này chỉ bị đột biến mất đoạn nhỏ không chứa tâm động ở 1 NST thuộc cặp số 5. Cho biết không phát sinh đột biến mới, thể đột biến này giảm phân bình thường và không xảy ra trao đổi chéo. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng về thể đột biến này?', 2, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(35, 'Một loài thực vật, cho cây thân cao, hoa đỏ (P) tự thụ phấn, thu được F1 có 4 loại kiểu hình trong đó có 1% số cây thân thấp, hoa trắng. Biết rằng mỗi gen quy định 1 tính trạng. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. F1 có tối đa 9 loại kiểu gen.\r\n<br>\r\nII. F1 có 32% số cây đồng hợp tử về 1 cặp gen.\r\n<br>\r\nIII. F1 có 24% số cây thân cao, hoa trắng.\r\n<br>\r\nIV. Kiểu gen của P có thể là AB/ab.\r\n  ', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(36, 'Ở ruồi giấm, alen A quy định thân xám trội hoàn toàn so với alen a quy định thân đen; alen B quy định cánh dài trội hoàn toàn so với alen b quy định cánh cụt; alen D quy định mắt đỏ trội hoàn toàn so với alen d quy định mắt trắng. Phép lai P:  , thu được F1 có 5,125% số cá thể có kiểu hình lặn về 3 tính trạng. Theo lí thuyết, số cá thể cái dị hợp tử về 1 trong 3 cặp gen ở F1 chiếm tỉ lệ', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(37, 'Một loài thực vật, cho cây hoa đỏ (P) tự thụ phấn, thu được F1 gồm 56,25% cây hoa đỏ; 18,75% cây hoa hồng; 18,75% cây hoa vàng; 6,25% cây hoa trắng. Lai phân tích cây hoa đỏ dị hợp tử về 2 cặp gen ở F1, thu được Fa. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. F1 có 6 loại kiểu gen quy định kiểu hình hoa đỏ.\r\n<br>\r\nII. Các cây hoa đỏ F1 giảm phân đều cho 4 loại giao tử với tỉ lệ bằng nhau.\r\n<br>\r\nIII. Fa có số cây hoa vàng chiếm 25%.\r\n<br>\r\nIV. Fa có số cây hoa đỏ chiếm tỉ lệ lớn nhất.', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(38, 'Một loài thực vật, tính trạng chiều cao thân do 2 cặp gen A, a và B, b phân li độc lập cùng quy định: kiểu gen có cả 2 loại alen trội A và B quy định thân cao, các kiểu gen còn lại đều quy định thân thấp. Alen D quy định hoa vàng trội hoàn toàn so với alen d quy định hoa trắng. Cho cây dị hợp tử về 3 cặp gen (P) tự thụ phấn, thu được F1 có kiểu hình phân li theo tỉ lệ 6 cây thân cao, hoa vàng : 6 cây thân thấp, hoa vàng : 3 cây thân cao, hoa trắng : 1 cây thân thấp, hoa trắng. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. Kiểu gen của cây P có thể là .\r\n<br>\r\nII. F1 có 1/4 số cây thân cao, hoa vàng dị hợp tử về 3 cặp gen.\r\n<br>\r\nIII. F1 có tối đa 7 loại kiểu gen.\r\n<br>\r\nIV. F1 có 3 loại kiểu gen quy định cây thân thấp, hoa vàng. ', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(39, 'Một quần thể thực vật tự thụ phấn, alen A quy định hoa đỏ trội hoàn toàn so với alen a quy định hoa trắng. Thế hệ xuất phát (P) có 20% số cây hoa trắng. Ở F3, số cây hoa trắng chiếm 25%. Cho rằng quần thể không chịu tác động của các nhân tố tiến hóa khác. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. Tần số kiểu gen ở thế hệ P là 24/35 AA : 4/35 Aa : 7/35 aa.\r\n<br>\r\nII. Tần số alen A ở thế hệ P là 9/35.\r\n<br>\r\nIII. Tỉ lệ kiểu hình ở F1 là 27 cây hoa đỏ : 8 cây hoa trắng.\r\n<br>\r\nIV. Hiệu số giữa tỉ lệ cây hoa đỏ có kiểu gen đồng hợp tử với tỉ lệ cây hoa trắng giảm dần qua các thế hệ.', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(40, 'Một loài động vật, xét 3 gen cùng nằm trên 1 nhiễm sắc thể thường theo thứ tự là gen 1 – gen 2- gen 3. Cho biết mỗi gen quy định một tính trạng, mỗi gen đều có 2 alen, các alen trội là trội hoàn toàn và không xảy ra đột biến. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\r\n<br>\r\nI. Cho các cá thể được mang kiểu hình trội về 2 trong 3 tình trạng lai với các cá thể mang kiểu hình lặn về 2 trong 3 tính trạng thì trong loài có tối đa 90 phép lai.\r\n<br>\r\nII. Loài này có tối đa 6 loại kiểu gen đồng hợp tử về cả 3 cặp gen.\r\n<br>\r\nIII. Cho các cá thể đực mang kiểu hình trội về 3 tính trạng, dị hợp tử về 2 cặp gen lai với cá thể cái mang kiểu hình lặn về 1 trong 3 tính trạng, có thể thu được đời con có 1 loại kiểu hình.\r\n<br>\r\nIV. Cho cá thể được mang kiểu hình trội về 1 trong 3 tính trạng lai với cá thể cái mang kiểu hình trội về 1 trong 3 tính trạng, có thể thu được đời con có kiểu hình phân li theo tỉ lệ 2 : 2 : 1 : 1. ', 3, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(41, 'noi dung cau hoi', 1, NULL, '2018-12-24 14:27:21', '2018-12-24 14:27:32', 0),
+(42, '2*1=?', 1, NULL, '2018-12-26 12:49:24', '2018-12-26 12:49:24', 0),
+(43, '2*2=?', 1, NULL, '2018-12-26 12:49:24', '2018-12-26 12:49:24', 0),
+(44, '2*3=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25', 0),
+(45, '2*4=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25', 0),
+(46, '2*5=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25', 0),
+(47, '2*6=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25', 0),
+(48, '2*7=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25', 0),
+(49, '2*8=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25', 0),
+(50, '2*9=?', 1, NULL, '2018-12-26 12:49:25', '2018-12-26 12:49:25', 0),
+(51, '2*10=?', 1, 'Theo bảng cửu chương II thì 2*10 = 20', '2018-12-26 12:49:25', '2018-12-26 19:07:54', 0),
+(55, 'What is GGWP stand for ?', 2, 'HeheXD', '2019-01-02 20:53:26', '2019-01-02 20:53:26', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `result`
+-- Cấu trúc bảng cho bảng `result`
 --
 
 CREATE TABLE `result` (
@@ -419,17 +299,20 @@ CREATE TABLE `result` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `result`
+-- Đang đổ dữ liệu cho bảng `result`
 --
 
 INSERT INTO `result` (`user_id`, `exam_id`, `completion_time`, `point`, `number_done_question`) VALUES
-(3, 4, '2018-12-26 19:33:14', 10, 10),
-(3, 4, '2018-12-26 19:33:27', 10, 10);
+(1, 4, '2018-12-28 19:51:07', 0, 0),
+(1, 4, '2018-12-29 11:22:25', 10, 10),
+(1, 4, '2018-12-29 12:27:34', 2, 10),
+(2, 4, '2018-12-29 12:47:32', 1, 10),
+(2, 4, '2018-12-29 12:49:51', 2, 10);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `subject`
+-- Cấu trúc bảng cho bảng `subject`
 --
 
 CREATE TABLE `subject` (
@@ -438,7 +321,7 @@ CREATE TABLE `subject` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `subject`
+-- Đang đổ dữ liệu cho bảng `subject`
 --
 
 INSERT INTO `subject` (`id`, `title`) VALUES
@@ -455,135 +338,144 @@ INSERT INTO `subject` (`id`, `title`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `full_name` varchar(70) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Change me',
   `email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone_number` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` text COLLATE utf8mb4_unicode_ci,
   `password` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` int(11) DEFAULT NULL COMMENT '0=pending,1=ok',
+  `status` int(11) DEFAULT '0' COMMENT '0=pending,1=ok',
   `access_code` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `level` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`id`, `full_name`, `email`, `password`, `status`, `access_code`, `level`) VALUES
-(3, 'Phạm Thanh Tùng', 'gicungduoc2809@gmail.com', '$2y$12$619626d8a317ff9f4b304uvkd/TiMCXw60dya.ykc.yNxh4bfO2v2', 1, '619626d8a317ff9f4b3043d14cfac436', 'Customer');
+INSERT INTO `users` (`id`, `full_name`, `email`, `phone_number`, `address`, `password`, `status`, `access_code`, `level`) VALUES
+(1, 'Change me', 'gicungduoc2809@gmail.com', '', '', '$2y$10$Uxmi1.ChE7oJJljeZz/v7ezH6tTYs1V/GOJbJP1mB/orK.rdYz/fS', 1, '7c63aa9ed6abeef43ee8f21efe4aa099', 'Customer'),
+(2, 'Admin', 'admin', '0976832573', 'On the Net, yep Im Spiderman', '$2y$10$eh8xtqCFNSRGBD2gq.mMlu774fbo9q0FU70gRiPigry9zErw1GT.6', 1, '26fd882e8b5629660657226b640cba25', 'Admin'),
+(14, 'Thử nghiệm', 'test227PM@gmail.com', '', '', '$2y$10$W4Wdqy9etWtQQknJshmdm.v8tBjuE06Zm23NOI9yQ0hrw8LBWd8QS', 0, NULL, 'Customer'),
+(25, 'CHính ĐM', 'chinhdm62@gmail.com', '123445678', '', '$2y$10$OpKq/wCLdhCh9RvxaCobJeeDOLdvT9PF0GQmpZ2NVJ9onvMxf9Nd2', 0, NULL, 'Customer'),
+(29, 'Phạm Thanh Tùng', 'tungpt62@wru.vn', '0976832573', 'Hà Nội', '$2y$10$LXtsYB2Y7Ld/1iggkbUCVOhpabP03pcx6Ozid17TOihOyBSkyY9Qm', 1, NULL, 'Admin'),
+(30, '', 'thunghiem112pm@gmail.com', '', '', '$2y$10$NUtGsaQ/uIvPGndrrFkhB.2yKHAVyLhsg3lV4cXguI3bsorunRCxi', 0, NULL, 'Customer'),
+(31, '', 'thunghiem22pm@gmail.com', '', '', '$2y$10$p90fEeNVR/skFSwzjrzyZuatVqFZz7JP7EjRxTQLOYnlqe56y0bFi', 0, NULL, 'Customer'),
+(32, 'Change me', '', '', '', '$2y$10$fCmvLGJciTgOeo2sHQ7Onu87CP4vxcJhYhpRZmDkSShObIER7UnOS', 1, NULL, 'Customer');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `answer`
+-- Chỉ mục cho bảng `answer`
 --
 ALTER TABLE `answer`
   ADD PRIMARY KEY (`id`),
   ADD KEY `answer` (`question_id`);
 
 --
--- Indexes for table `exam`
+-- Chỉ mục cho bảng `exam`
 --
 ALTER TABLE `exam`
   ADD PRIMARY KEY (`id`),
   ADD KEY `subject_id` (`subject_id`);
 
 --
--- Indexes for table `exam_info`
+-- Chỉ mục cho bảng `exam_info`
 --
 ALTER TABLE `exam_info`
   ADD PRIMARY KEY (`exam_id`,`question_id`),
   ADD KEY `question_id` (`question_id`);
 
 --
--- Indexes for table `question`
+-- Chỉ mục cho bảng `question`
 --
 ALTER TABLE `question`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `result`
+-- Chỉ mục cho bảng `result`
 --
 ALTER TABLE `result`
   ADD PRIMARY KEY (`user_id`,`exam_id`,`completion_time`),
   ADD KEY `exam_id` (`exam_id`);
 
 --
--- Indexes for table `subject`
+-- Chỉ mục cho bảng `subject`
 --
 ALTER TABLE `subject`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `answer`
+-- AUTO_INCREMENT cho bảng `answer`
 --
 ALTER TABLE `answer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=231;
 
 --
--- AUTO_INCREMENT for table `exam`
+-- AUTO_INCREMENT cho bảng `exam`
 --
 ALTER TABLE `exam`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `question`
+-- AUTO_INCREMENT cho bảng `question`
 --
 ALTER TABLE `question`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
--- AUTO_INCREMENT for table `subject`
+-- AUTO_INCREMENT cho bảng `subject`
 --
 ALTER TABLE `subject`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `answer`
+-- Các ràng buộc cho bảng `answer`
 --
 ALTER TABLE `answer`
   ADD CONSTRAINT `answer` FOREIGN KEY (`question_id`) REFERENCES `question` (`id`);
 
 --
--- Constraints for table `exam`
+-- Các ràng buộc cho bảng `exam`
 --
 ALTER TABLE `exam`
   ADD CONSTRAINT `exam_ibfk_1` FOREIGN KEY (`subject_id`) REFERENCES `subject` (`id`);
 
 --
--- Constraints for table `exam_info`
+-- Các ràng buộc cho bảng `exam_info`
 --
 ALTER TABLE `exam_info`
   ADD CONSTRAINT `exam_info_ibfk_1` FOREIGN KEY (`exam_id`) REFERENCES `exam` (`id`),
   ADD CONSTRAINT `exam_info_ibfk_2` FOREIGN KEY (`question_id`) REFERENCES `question` (`id`);
 
 --
--- Constraints for table `result`
+-- Các ràng buộc cho bảng `result`
 --
 ALTER TABLE `result`
   ADD CONSTRAINT `result_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),

@@ -28,10 +28,23 @@ require_once('database.php');
         {
             if(!$this->emailExists($email))
             {
+                $hash = password_hash($password, PASSWORD_BCRYPT);
                 $sql = "INSERT INTO users(full_name, phone_number, address, email, password, level, status) VALUES (?,?,?,?,?,?,?)";
                 $this->setQuery($sql);
-                return $this->execute(array($full_name, $phone_number, $address, $email, $password, $level, $status));
+                return $this->execute(array($full_name, $phone_number, $address, $email, $hash, $level, $status));
             }
+            else return false;
+        }
+        public function updateUser($full_name, $phone_number, $address, $email, $password, $level, $status)
+        {
+            $sql = "UPDATE users SET full_name = '$full_name', phone_number = '$phone_number', address = '$address', level = '$level', status = $status WHERE email = '$email'";
+            if($password != '')
+            {
+                $hash = password_hash($password, PASSWORD_BCRYPT);
+                $sql = "UPDATE users SET full_name = '$full_name', phone_number = '$phone_number', address = '$address', password = '$hash', level = '$level', status = '$status' WHERE email = '$email'";
+            }
+            $this->setQuery($sql);
+            return $this->execute();
         }
         public function emailExists($email)
         {

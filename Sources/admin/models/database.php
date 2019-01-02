@@ -86,7 +86,7 @@
 
         public function getLastId()
         {
-            return $this->pdo->lastInsertId();
+            return $this->conn->lastInsertId();
         }
 
         public function disconnect()

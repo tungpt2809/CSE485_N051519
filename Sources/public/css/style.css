@@ -4,7 +4,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    background: #eee;
+    /* background: #eee; */
+    background-image: linear-gradient(to right, #6EC3C9, #CAE5E8);
     zoom: .9;
 }
 /* sidebar */
