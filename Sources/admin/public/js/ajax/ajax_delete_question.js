@@ -7,7 +7,6 @@ function deleteAjax(id){
             data: {delete_id: id},
             success: function(data){
                 $('#delete-'+id).hide('slow');
-                alert('Xóa thành công.\nReload trang để cập nhật');
             }
         })
     }

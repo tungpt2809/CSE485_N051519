@@ -7,11 +7,4 @@
     {
         $c_user->updateUserInfo();
     }
-    else if(isset($_GET['action']) && $_GET['action'] == 'update_account')
-    {
-        $c_user->updateUserAccount();    
-    }
-    else{
-        
-    }
 ?>

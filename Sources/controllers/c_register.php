@@ -26,18 +26,18 @@ require_once('views/v_register.php');
                             $body.="Please click the following link to verify your email and login: {$home_url}verify.php?access_code={$access_code}";
                             $subject="Verification Email";
                             if($this->sendEmailViaPhpMail($send_to_email, $subject, $body))
-                                echo "<div class='alert alert-success'> Verification link was sent to your email. Click that link to login. </div>";
-                            else echo "<div class='alert alert-danger'> User was created but unable to send verification email. Please contact admin.</div>";
+                                echo "<div class='alert alert-success alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button> Verification link was sent to your email. Click that link to login. </div>";
+                            else echo "<div class='alert alert-danger alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button> User was created but unable to send verification email. Please contact admin.</div>";
                         }
-                        else echo "<div class='alert alert-danger'> Register Failed </div>";
+                        else echo "<div class='alert alert-danger alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button> Register Failed </div>";
                     }
                     else {
-                        echo "<div class='alert alert-danger'>";
+                        echo "<div class='alert alert-danger alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button>";
                             echo "The email you specified is already registered. Please try again or <a href='{$home_url}login.php'>login.</a>";
                         echo "</div>";
                     }
                 }
-                else echo "<div class='alert alert-danger'>Xác nhận sai mật khẩu</div>";
+                else echo "<div class='alert alert-danger alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button>Xác nhận sai mật khẩu</div>";
             }
         }
         public function sendEmailViaPhpMail($send_to_email, $subject, $body){

@@ -1,6 +1,7 @@
 <?php
 require_once('models/m_question.php');
 require_once('models/m_answer.php');
+require_once('models/get_subject.php');
     class C_question
     {
         public function showQuestionPage()
@@ -11,6 +12,7 @@ require_once('models/m_answer.php');
             $this->updateQuestion();
             $m_question = new M_question();
             $m_answer = new M_answer();
+            $m_subject = new M_subject();
             $total_rows = $m_question->countAll();
             $records_per_page = 5;
             $page = isset($_GET['page']) ? $_GET['page'] : 1;

@@ -1,7 +1,7 @@
 <?php
 require_once('views/layout/layout_head.php');
 if(isset($_SESSION['isInserted'])) echo $_SESSION['isInserted'];
-// if(isset($_SESSION['isUpdated'])) echo $_SESSION['isUpdated'];
+if(isset($_SESSION['isUpdated'])) echo $_SESSION['isUpdated'];
 ?>
 <div id="question-list">
 <h1 class="mrg-30">Q U E S T I O N _ L I S T</h1>
@@ -34,7 +34,7 @@ if(isset($_SESSION['isInserted'])) echo $_SESSION['isInserted'];
             </div>
             <div class="col-2">
                 <span>Mức độ : <?=($quest->level_of_difficult==1)?'Dễ':(($quest->level_of_difficult==1)?'Trung Bình':'Khó')?></span>
-                <span>Môn Học : <?=($quest->subject_id!=0)?$m_question->getSubject($quest->subject_id)->title:'Chưa Có'?></span>
+                <span>Môn : <?=($quest->subject_id!=0)?$m_subject->getSubject($quest->subject_id):'Chưa Có'?></span>
             </div>
         </div>
         <div class="btn-group" role="group">

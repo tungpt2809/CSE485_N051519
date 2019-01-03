@@ -1,5 +1,5 @@
 <?php
-    include_once('models/database.php');
+    include_once('database.php');
     class M_user extends Database
     {
         public $id;
@@ -66,6 +66,20 @@
             $email = htmlspecialchars(strip_tags($email));
             
             return $this->execute(array($full_name, $phone_number, $address, $email));
+        }
+        public function getPassword($id)
+        {
+            $sql = "SELECT password FROM users WHERE id = $id";
+            $this->setQuery($sql);
+            return $this->loadRow()->password;
+        }
+
+        public function changePassword($hashNew, $id)
+        {
+            $sql = "UPDATE users SET password = '$hashNew' WHERE id = $id";
+            var_dump($sql);
+            $this->setQuery($sql);
+            return $this->execute();
         }
     }
 ?>

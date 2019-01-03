@@ -4,7 +4,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    background: #eee;
+    background: #ccc;
     zoom: .9;
 }
 /* end navbar */
@@ -27,20 +27,23 @@ body{
     margin-bottom: 5px !important;
     height: auto; 
     min-height: 505px; 
-    background: white;
+    background: #eee;
+    border: 1px solid #000;
 }
 .exam-right{ 
-    width: 200px;
+    width: 180px;
     display: inline-block;
     overflow: auto;
     position: absolute;
     top: 10px;  
     right: -100px;
     transition: 0.6s;
-    height: 490px;
-    background: white; 
-    border: 2px solid #00F; 
+    min-height: 290px;
+    max-height: 400px;
+    border: 2px solid #000000;
+    border-left: none;
     visibility: hidden;
+    text-align: center;  
 }
 .sticky {
     position: fixed;
@@ -55,10 +58,8 @@ body{
     font-size: 16px;
     font-weight: bold; 
 }
-.exam-right .menu-link .tick{ 
-    float: right; 
-    color: green;
-    margin-right: 15px; 
+.exam-right .menu-link:hover{ 
+    background: #6EC3C9;
 }
 .exam-left{
     width: calc(100% - 200px); 
@@ -79,7 +80,6 @@ body{
 #timer{
     display: block;
     font-size: 32px;
-    border-bottom: 2px solid #00F;
     text-align: center;        
     position: fixed;
     right: 205px;        

@@ -3,7 +3,7 @@ function deleteAjax(id){
     if(isOk){
         $.ajax({
             type: 'post',
-            url: 'models/delete_user.php',
+            url: 'models/delete_exam.php',
             data: {delete_id: id},
             success: function(data){
                 console.log(data);

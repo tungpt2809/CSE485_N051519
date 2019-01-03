@@ -57,7 +57,9 @@ require_once('models/m_user.php');
                 $email = htmlspecialchars(strip_tags($email));
                 $password = $_POST['edit_pwd'];
                 $level = $_POST['edit_level'];
-                $status = $_POST['edit_status'];
+                if(isset($_POST['edit_status']))
+                    $status = $_POST['edit_status'];
+                else $status = 1;    
 
                 if($edit->updateUser($full_name, $phone_number, $address, $email, $password, $level, $status))
                     $_SESSION['isUpdated'] = "<div style='position: relative' class='alert alert-success alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button>Sửa thành công $full_name</div>";

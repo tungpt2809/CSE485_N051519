@@ -6,6 +6,5 @@
     include('controllers/c_register.php');
     $c_register = new C_register();
     $c_register->register();
-    include_once('views/layout/home_foot.php');
 ?>
 

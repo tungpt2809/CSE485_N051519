@@ -33,7 +33,7 @@ require_once('views/v_login.php');
                 }
                 else
                 {
-                    echo "<div class='alert alert-danger' role='alert'>
+                    echo "<div class='alert alert-danger alert-dismissible container'><button type='button' class='close' data-dismiss='alert'>&times;</button
                         Access Denied.<br />
                         Your username or password maybe incorrect
                         </div>";

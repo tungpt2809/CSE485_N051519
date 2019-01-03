@@ -9,14 +9,14 @@ if(isset($_SESSION['isUpdated'])) echo $_SESSION['isUpdated'];
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#new-user-modal">
     + Thêm Mới Một User
     </button> -->
-    <table class='table table-sm table-hover table-responsive table-bordered table-light'>
+    <table class='table table-sm table-hover table-bordered table-light'>
         <thead class='thead-light'>
             <tr>
                 <th>#</th>
                 <th>Fullname</th>
                 <th>Email</th>
                 <th>Contact Number</th>
-                <th class="col-md-5">Address</th>
+                <th>Address</th>
                 <th>Access Level</th>
                 <th>Status</th>
                 <th>Edit</th>

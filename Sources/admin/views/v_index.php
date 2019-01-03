@@ -1,14 +1,3 @@
-<?php 
-include_once('views/layout/layout_head.php');
-?>
-<style>
-
-</style>
-    <div class="container" id="admin-content">
-        
-    </div>            
-
-
 <?php
-include_once('views/layout/layout_foot.php');
+    header("Location: {$home_url}admin/user.php?action=logged_in_as_admin");
 ?>

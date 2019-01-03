@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" class="container" action="question.php" id="edit-form-<?=$quest->id?>">
+                <form method="POST" class="container" action="question.php<?=isset($_GET['page'])?('?page='.$_GET['page']):''?>" id="edit-form-<?=$quest->id?>">
                     <input type="hidden" name="question_id" value="<?=$quest->id?>">
                     <div class="form-group row">
                         <label class="col-2">Nội Dung Câu Hỏi:</label>

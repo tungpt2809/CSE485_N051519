@@ -54,5 +54,11 @@
             $this->setQuery($sql);
             return $this->loadRow();
         }
+        public function getQuestionBySubjectId($id)
+        {
+            $sql = "SELECT id, content FROM question WHERE subject_id = $id";
+            $this->setQuery($sql);
+            return $this->loadAllRows();
+        }
     }
 ?>

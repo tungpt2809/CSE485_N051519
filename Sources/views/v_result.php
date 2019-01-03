@@ -115,9 +115,14 @@
     </div>
     <div class="row" style="margin: 10px auto 50px auto">
 		<div class="col-md-12 text-center">
-		    - LE FIN -
+            - LE FIN -
+            <br>
+        <a class="navbar-brand" href="<?php echo $home_url; ?>"> H 0 M E</a>
         </div>
 	</div>
-    <script src="public/js/examInfo.js"></script>
+    <script src="public/js/jquery331.js"></script>
+	<script src="public/js/popper1143.min.js"></script>
+	<script src="public/js/bootstrap.min.js"></script>
+	<script src="public/js/examInfo.js"></script>
 </body>
 </html>

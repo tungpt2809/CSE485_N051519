@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body row">  
-                <form method="POST" action="user.php" id="update-form-<?=$user->id?>">
+                <form method="POST" action="user.php<?=isset($_GET['page'])?('?page='.$_GET['page']):''?>" id="update-form-<?=$user->id?>">
                     <div class="col-6">
                         <div class="form-group">
                             <label>Email:</label>
@@ -36,7 +36,8 @@
                         <div class="form-group">
                             <label>Trạng thái tài khoản:</label>
                             <select name="edit_status" class="form-control" <?=($_SESSION['user_id'] == $user->id)?'disabled':'' ?>>
-                            <?php if($user->status == 1)
+                            <?php
+                            if($user->status == 1)
                             {
                                 echo '<option value="1">Đã kích hoạt</option>';
                                 echo '<option value="0">Chưa kích hoạt</option>';
@@ -45,7 +46,8 @@
                             {
                                 echo '<option value="0">Chưa kích hoạt</option>';
                                 echo '<option value="1">Đã kích hoạt</option>';
-                            }?>
+                            }                                
+                            ?>
                             </select>
                         </div>
                     </div>

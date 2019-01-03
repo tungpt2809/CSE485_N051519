@@ -122,6 +122,8 @@
 		} 
 	</script>
 	<script src="public/js/jquery331.js"></script>
+	<script src="public/js/popper1143.min.js"></script>
+	<script src="public/js/bootstrap.min.js"></script>
 	<script src="public/js/examInfo.js"></script>
 </body>
 </html>
