@@ -4,7 +4,7 @@ if(isset($_SESSION['isInserted'])) echo $_SESSION['isInserted'];
 if(isset($_SESSION['isUpdated'])) echo $_SESSION['isUpdated'];
 ?>
 <div id="question-list">
-<h1 class="mrg-30">Q U E S T I O N _ L I S T</h1>
+<h1 class="mrg-30">Q U E S T I O N</h1>
 <button type="button" class="btn btn-primary mrg-30" data-toggle="modal" data-target="#new-question-modal">
     + Thêm Một Câu Hỏi Mới
 </button>

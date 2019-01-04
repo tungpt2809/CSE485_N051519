@@ -4,7 +4,7 @@ if(isset($_SESSION['isInserted'])) echo $_SESSION['isInserted'];
 if(isset($_SESSION['isUpdated'])) echo $_SESSION['isUpdated'];
 ?>
 <div class="container-fluid">
-    <h1 class="mrg-top-30">E X A M _ L I S T</h1>
+    <h1 class="mrg-top-30">E X A M</h1>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#new-exam-modal">
     + Tạo Một Đề Thi
     </button>

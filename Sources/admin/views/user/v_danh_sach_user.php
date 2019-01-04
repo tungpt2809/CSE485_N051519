@@ -4,7 +4,7 @@ if(isset($_SESSION['isInserted'])) echo $_SESSION['isInserted'];
 if(isset($_SESSION['isUpdated'])) echo $_SESSION['isUpdated'];
 ?>
 <div class="container-fluid">
-    <h1 class="mrg-top-30">U S E R _ L I S T</h1>
+    <h1 class="mrg-top-30">U S E R</h1>
     <a href="#new-user" class="btn btn-primary">+ Thêm Mới Một User</a>
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#new-user-modal">
     + Thêm Mới Một User

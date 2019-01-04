@@ -15,7 +15,7 @@
             </div>
             <div class="form-group">
                 <label>Điện thoại</label>
-                <input type="text" class="form-control" name="phone_number" value="<?=$_SESSION['sdt']?>">
+                <input type="text" class="form-control" name="phone_number" value="<?=$_SESSION['phone_number']?>">
             </div>
             <input type="submit" id="update-info" value="Lưu thông tin" class="btn btn-primary">
         </div>
